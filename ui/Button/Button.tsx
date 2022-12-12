@@ -3,18 +3,27 @@ import { clsnm } from 'utils/clsnm';
 
 import styles from './Button.module.scss';
 
-interface Props extends ComponentPropsWithoutRef<'button'> {
-  color: 'black' | 'transparent';
+interface ButtonSpecificProps extends ComponentPropsWithoutRef<'button'> {
   forwardedRef?: RefObject<HTMLButtonElement>;
+}
+
+interface AnchorSpecificProps extends ComponentPropsWithoutRef<'a'> {
+  forwardedRef?: RefObject<HTMLAnchorElement>;
+}
+
+type Props = {
+  color: 'black' | 'transparent';
   leftEl?: ReactNode;
   rigthEl?: ReactNode;
   height?: string;
   width?: string;
   paddingX?: string;
   paddingY?: string;
-}
+  href?: string;
+} & (ButtonSpecificProps | AnchorSpecificProps);
 
 export const Button = ({
+  href,
   color,
   className,
   style,
@@ -28,8 +37,10 @@ export const Button = ({
   width,
   ...props
 }: Props) => {
+  const Main: any = href != null ? 'a' : 'button';
+
   return (
-    <button
+    <Main
       ref={forwardedRef}
       style={{
         height: style?.height ?? height,
@@ -46,6 +57,6 @@ export const Button = ({
       {leftEl != null && <div className={styles.left}>{leftEl}</div>}
       <span className={clsnm(styles.text, 'poppins')}>{children}</span>
       {rigthEl != null && <div className={styles.right}>{rigthEl}</div>}
-    </button>
+    </Main>
   );
 };
