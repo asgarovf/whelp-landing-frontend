@@ -1,21 +1,20 @@
 .button {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  border-radius: 60px;
   outline: none;
   cursor: pointer;
 
   &.transparent {
-    background: transparent;
+    background: var(--transparent-button-bg);
     transition: 0.1s linear;
-    border: 2px solid var(--wh-black);
-    color: var(--wh-black);
+    border: 2px solid var(--transparent-button-border);
+    color: var(--transparent-button-color);
 
     &:hover {
-      background: rgba(0, 0, 0, 0.04);
+      background: var(--transparent-button-bg-hover);
       transition: 0.1s linear;
-      color: var(--wh-black);
     }
 
     &:focus {
@@ -24,18 +23,38 @@
   }
 
   &.black {
-    background: var(--wh-black);
+    background: var(--black-button-bg);
     transition: 0.1s linear;
-    border: 2px solid var(--wh-black);
-    color: var(--wh-white);
+    border: 2px solid var(--black-button-border);
+    color: var(--black-button-color);
 
     &:hover {
-      background: var(--wh-neutral-90);
+      background: var(--black-button-bg-hover);
       transition: 0.1s linear;
     }
 
     &:focus {
       box-shadow: 0px 0px 0px 2px var(--wh-blue-10);
+    }
+  }
+
+  &.flat {
+    background: var(--flat-button-bg);
+    transition: 0.1s linear;
+    border: 2px solid var(--flat-button-border);
+    color: var(--flat-button-color);
+
+    &:hover {
+      background: var(--flat-button-bg-hover);
+      transition: 0.1s linear;
+
+      & .text {
+        text-decoration: underline;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
     }
   }
 }
@@ -50,4 +69,5 @@
 
 .text {
   font-size: 16px;
+  white-space: nowrap;
 }

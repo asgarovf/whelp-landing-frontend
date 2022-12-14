@@ -1,0 +1,33 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+@media (max-width: $bp-sm) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: $bp-sm) {
+  .orderSecond {
+    order: 2;
+  }
+  .orderFirst {
+    order: 1;
+  }
+}

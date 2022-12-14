@@ -12,7 +12,7 @@ interface AnchorSpecificProps extends ComponentPropsWithoutRef<'a'> {
 }
 
 type Props = {
-  color: 'black' | 'transparent';
+  color: 'black' | 'transparent' | 'flat';
   leftEl?: ReactNode;
   rigthEl?: ReactNode;
   height?: string;
@@ -20,6 +20,10 @@ type Props = {
   paddingX?: string;
   paddingY?: string;
   href?: string;
+  topLeftRadius?: string;
+  topRightRadius?: string;
+  bottomLeftRadius?: string;
+  bottomRightRadius?: string;
 } & (ButtonSpecificProps | AnchorSpecificProps);
 
 export const Button = ({
@@ -33,6 +37,10 @@ export const Button = ({
   rigthEl,
   paddingX = '24px',
   paddingY = '12px',
+  topLeftRadius = '60px',
+  topRightRadius = '60px',
+  bottomLeftRadius = '60px',
+  bottomRightRadius = '60px',
   height,
   width,
   ...props
@@ -49,6 +57,10 @@ export const Button = ({
         paddingBottom: paddingY,
         paddingRight: paddingX,
         paddingLeft: paddingX,
+        borderBottomLeftRadius: bottomLeftRadius,
+        borderTopLeftRadius: topLeftRadius,
+        borderTopRightRadius: topRightRadius,
+        borderBottomRightRadius: bottomRightRadius,
         ...style,
       }}
       className={clsnm(styles.button, className, styles[color])}

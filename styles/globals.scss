@@ -2,6 +2,10 @@
 @import './colors.scss';
 @import './vars.scss';
 
+:root {
+  --navbar-height: 80px;
+}
+
 html,
 body {
   padding: 0;

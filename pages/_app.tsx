@@ -1,11 +1,9 @@
-import { Poppins } from '@next/font/google';
 import { useInitialTheme } from 'hooks';
 import type { AppProps } from 'next/app';
 import 'styles/globals.scss';
+import { getFonts } from 'utils/getFonts';
 
-const poppins = Poppins({
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-});
+const { poppins, cooper } = getFonts();
 
 export default function App({ Component, pageProps }: AppProps) {
   useInitialTheme();
@@ -20,6 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }
         .poppins {
           font-family: ${poppins.style.fontFamily} !important;
+        }
+        .cooper {
+          font-family: ${cooper.style.fontFamily} !important;
         }
       `}</style>
       <Component {...pageProps} />{' '}

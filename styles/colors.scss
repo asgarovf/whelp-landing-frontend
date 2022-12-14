@@ -2,6 +2,21 @@ html.light {
   --main: #fefbf6;
   --text: var(--wh-black);
   --subtext: var(--wh-steel-70);
+
+  --black-button-bg: var(--wh-black);
+  --black-button-bg-hover: var(--wh-neutral-90);
+  --black-button-border: var(--wh-black);
+  --black-button-color: var(--wh-white);
+
+  --transparent-button-bg: transparent;
+  --transparent-button-bg-hover: rgba(0, 0, 0, 0.04);
+  --transparent-button-border: var(--wh-black);
+  --transparent-button-color: var(--wh-black);
+
+  --flat-button-bg: transparent;
+  --flat-button-bg-hover: transparent;
+  --flat-button-border: transparent;
+  --flat-button-color: var(--wh-black);
 }
 
 html.dark {

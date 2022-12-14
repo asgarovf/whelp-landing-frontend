@@ -14,15 +14,11 @@ export const Navbar = () => {
           </div>
 
           <div className={styles.buttons}>
-            <Button height="48px" color="black">
-              Hello
+            <Button href="hello" height="48px" color="flat">
+              Sign In
             </Button>
-            <Button
-              height="48px"
-              style={{ marginLeft: '8px' }}
-              color="transparent"
-            >
-              Hello
+            <Button height="48px" style={{ marginLeft: '8px' }} color="black">
+              Get Started
             </Button>
           </div>
         </div>
