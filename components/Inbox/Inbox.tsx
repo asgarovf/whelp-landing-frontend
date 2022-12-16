@@ -30,7 +30,9 @@ export const Inbox = () => {
 const InboxRight = () => {
   return (
     <Content>
-      <Header>Manage all your conversations in one place</Header>
+      <Header inheritStyles="h1" as="h3">
+        Manage all your conversations in one place
+      </Header>
       <Text className={styles.subtext} subtext>
         We created a single inbox across phone, email, chat and messaging apps
         to manage and respond to all conversations.

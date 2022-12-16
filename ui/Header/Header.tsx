@@ -7,7 +7,7 @@ type HeaderTypes = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 interface Props extends ComponentPropsWithoutRef<'h1'> {
   forwardedRef?: RefObject<HTMLHeadingElement>;
-  as?: HeaderTypes;
+  as: HeaderTypes;
   inheritStyles?: HeaderTypes;
 }
 
@@ -23,7 +23,12 @@ export const Header = ({
 
   return (
     <MainComponent
-      className={clsnm(styles.header, styles[as], className, 'cooper')}
+      className={clsnm(
+        styles.header,
+        styles[inheritStyles],
+        className,
+        'cooper',
+      )}
       ref={forwardedRef}
       {...props}
     >
