@@ -25,7 +25,7 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
 
 export const DualGrid = ({
   paddingY = 80,
-  maxHeight = false,
+  maxHeight = true,
   gap = 24,
   paddingTop,
   paddingBottom,

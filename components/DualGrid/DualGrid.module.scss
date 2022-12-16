@@ -6,6 +6,10 @@
 
   &.maxHeight {
     min-height: calc(100vh - var(--navbar-height));
+
+    @media (min-height: 1000px) {
+      min-height: 800px;
+    }
   }
 }
 
