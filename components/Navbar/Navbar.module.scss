@@ -21,3 +21,10 @@
 .buttons {
   display: flex;
 }
+
+.logoInner {
+  & svg {
+    width: 126px;
+    height: 28px;
+  }
+}

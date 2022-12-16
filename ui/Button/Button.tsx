@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef, ReactNode, RefObject } from 'react';
+import { DynamicBorderRadiusProps } from 'types';
 import { clsnm } from 'utils/clsnm';
 
 import styles from './Button.module.scss';
@@ -20,11 +21,8 @@ type Props = {
   paddingX?: string;
   paddingY?: string;
   href?: string;
-  topLeftRadius?: string;
-  topRightRadius?: string;
-  bottomLeftRadius?: string;
-  bottomRightRadius?: string;
-} & (ButtonSpecificProps | AnchorSpecificProps);
+} & DynamicBorderRadiusProps &
+  (ButtonSpecificProps | AnchorSpecificProps);
 
 export const Button = ({
   href,

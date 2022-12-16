@@ -17,6 +17,12 @@ html.light {
   --flat-button-bg-hover: transparent;
   --flat-button-border: transparent;
   --flat-button-color: var(--wh-black);
+
+  --input-bg: transparent;
+  --input-bg-hover: rgba(0, 0, 0, 0.01);
+  --input-border: var(--wh-black);
+  --input-placeholder: var(--wh-steel-70);
+  --input-color: var(--wh-black);
 }
 
 html.dark {

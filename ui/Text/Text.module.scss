@@ -1,0 +1,18 @@
+.text {
+  margin-bottom: 0px !important;
+  color: var(--text);
+
+  &.medium {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &.large {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  &.subtext {
+    color: var(--subtext);
+  }
+}

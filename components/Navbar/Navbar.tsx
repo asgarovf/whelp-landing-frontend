@@ -1,5 +1,5 @@
-import Logo from 'assets/images/logo.svg';
-import Image from 'next/image';
+import LogoImage from 'assets/images/logo.svg';
+import Link from 'next/link';
 import { Button, Container } from 'ui';
 
 import styles from './Navbar.module.scss';
@@ -9,10 +9,9 @@ export const Navbar = () => {
     <div className={styles.wrapper}>
       <Container>
         <div className={styles.inner}>
-          <div className={styles.logo}>
-            <Image width={126} height={28} src={Logo.src} alt="Logo" />
-          </div>
-
+          <Link href="/">
+            <Logo />
+          </Link>
           <div className={styles.buttons}>
             <Button href="hello" height="48px" color="flat">
               Sign In
@@ -23,6 +22,16 @@ export const Navbar = () => {
           </div>
         </div>
       </Container>
+    </div>
+  );
+};
+
+const Logo = () => {
+  return (
+    <div className={styles.logo}>
+      <div className={styles.logoInner}>
+        <LogoImage />
+      </div>
     </div>
   );
 };

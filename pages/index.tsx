@@ -1,4 +1,4 @@
-import { DocumentHead, DualGrid, Navbar } from 'components';
+import { CRM, DocumentHead, Hero, Inbox, Navbar } from 'components';
 import { Container, Layout } from 'ui';
 
 export default function Home() {
@@ -8,11 +8,9 @@ export default function Home() {
       <Layout>
         <Navbar />
         <Container>
-          <DualGrid
-            reverseOnMobile
-            left={<div>assetsasf</div>}
-            right={<div>asfafssf</div>}
-          />
+          <Hero />
+          <CRM />
+          <Inbox />
         </Container>
       </Layout>
     </>

@@ -1,20 +1,35 @@
 import { useSmall } from 'hooks';
-import { ComponentPropsWithoutRef, ReactNode, useMemo } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ReactNode,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { clsnm } from 'utils/clsnm';
 
 import styles from './DualGrid.module.scss';
 
 interface Props extends ComponentPropsWithoutRef<'div'> {
   paddingY?: number;
+  paddingTop?: number;
+  paddingBottom?: number;
   left: ReactNode;
   right: ReactNode;
   reverseOnMobile?: boolean;
   leftClassName?: string;
   rightClassName?: string;
+  gap?: number;
+  maxHeight?: boolean;
 }
 
 export const DualGrid = ({
   paddingY = 80,
+  maxHeight = false,
+  gap = 24,
+  paddingTop,
+  paddingBottom,
   left,
   right,
   reverseOnMobile = false,
@@ -23,14 +38,29 @@ export const DualGrid = ({
   ...props
 }: Props) => {
   const small = useSmall();
+  const [pY, setPY] = useState(0);
+  const [_gap, setGap] = useState(0);
+
+  useLayoutEffect(() => {
+    setPY(small ? Math.floor(paddingY / 2) : paddingY);
+  }, [paddingY, small]);
+
+  useLayoutEffect(() => {
+    setGap(gap);
+  }, [gap]);
+
   const _paddingY = useMemo(() => {
-    return small ? `${paddingY / 2}px` : `${paddingY}px`;
-  }, [small, paddingY]);
+    return `${pY}px`;
+  }, [small, pY]);
 
   return (
     <div
-      style={{ paddingTop: _paddingY, paddingBottom: _paddingY }}
-      className={clsnm(styles.wrapper)}
+      style={{
+        gap: _gap,
+        paddingTop: paddingTop ?? _paddingY,
+        paddingBottom: paddingBottom ?? _paddingY,
+      }}
+      className={clsnm(styles.wrapper, maxHeight && styles.maxHeight)}
       {...props}
     >
       <div

@@ -6,3 +6,5 @@ export { useOnClickOutside } from './useOnClickOutside';
 export { useTheme, useInitialTheme } from './useTheme';
 export { useSmall } from './useSmall';
 export { useMedium } from './useMedium';
+export { useDefaultGap } from './useDefaultGap';
+export { useGap } from './useGap';
