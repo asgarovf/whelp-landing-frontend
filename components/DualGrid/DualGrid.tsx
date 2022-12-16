@@ -3,7 +3,6 @@ import {
   ComponentPropsWithoutRef,
   ReactNode,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useState,
 } from 'react';
@@ -41,11 +40,11 @@ export const DualGrid = ({
   const [pY, setPY] = useState(0);
   const [_gap, setGap] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setPY(small ? Math.floor(paddingY / 2) : paddingY);
   }, [paddingY, small]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setGap(gap);
   }, [gap]);
 

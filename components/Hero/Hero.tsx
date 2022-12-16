@@ -12,7 +12,6 @@ export const Hero = () => {
 
   return (
     <DualGrid
-      maxHeight
       gap={gap}
       paddingTop={40}
       leftClassName={styles.left}
@@ -28,6 +27,7 @@ const HeroRight = () => {
     <div className={styles.imageWrapper}>
       <div className={styles.inner}>
         <Image
+          loading="lazy"
           className={styles.imageBg}
           src={HeroRightBackground}
           alt="Hero background"
