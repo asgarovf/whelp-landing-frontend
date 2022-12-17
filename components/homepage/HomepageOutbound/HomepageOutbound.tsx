@@ -1,14 +1,14 @@
 import { ArrowRight } from 'assets/icons';
-import CRMBackgroundImage from 'assets/images/homepage/crm/right.png';
+import OutboundBackgroundImage from 'assets/images/homepage/outbound/left.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Icon, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './CRM.module.scss';
+import styles from './HomepageOutbound.module.scss';
 
-export const CRM = () => {
+export const HomepageOutbound = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
@@ -17,24 +17,24 @@ export const CRM = () => {
 
   return (
     <DualGrid
+      reverseOnMobile
       paddingY={80}
-      leftClassName={styles.left}
+      rightClassName={styles.right}
       gap={gap}
-      left={<CRMLeft />}
-      right={<CRMRight />}
+      left={<Left />}
+      right={<Right />}
     />
   );
 };
 
-const CRMLeft = () => {
+const Right = () => {
   return (
     <Content>
-      <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+      <Header inheritStyles="h1" as="h3">
+        Automate your campaign
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Send bulk messages via WhatsApp, Telegram, Email, Facebook Messenger.
       </Text>
       <Button
         className={styles.button}
@@ -52,14 +52,14 @@ const CRMLeft = () => {
   );
 };
 
-const CRMRight = () => {
+const Left = () => {
   return (
     <div className={styles.imageWrapper}>
       <div className={styles.inner}>
         <Image
           className={styles.imageBg}
-          src={CRMBackgroundImage}
-          alt="CRM background"
+          src={OutboundBackgroundImage}
+          alt="Inbox background"
         />
       </div>
     </div>

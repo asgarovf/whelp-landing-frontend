@@ -1,0 +1,44 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: $bp-sm) {
+    display: flex;
+    gap: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.item {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+
+  & .title {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  & .content {
+    font-size: 16px;
+    color: var(--subtext);
+  }
+
+  & .iconWrapper {
+    display: flex;
+    flex-shrink: 0;
+    width: 76px;
+    height: 52px;
+  }
+
+  @media (max-width: $bp-sm) {
+    height: 244px;
+    margin-right: 20px;
+  }
+}

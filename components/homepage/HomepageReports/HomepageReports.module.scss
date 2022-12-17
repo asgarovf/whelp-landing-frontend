@@ -1,0 +1,37 @@
+@import 'styles/vars.scss';
+
+.subtext {
+  margin-top: 20px;
+  max-width: 85%;
+
+  @media (max-width: $bp-sm) {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.button {
+  margin-top: 32px;
+}
+
+.left {
+  justify-content: center;
+}
+
+.imageWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  & .inner {
+    display: flex;
+    position: relative;
+  }
+
+  & .imageBg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

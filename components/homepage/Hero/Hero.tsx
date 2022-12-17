@@ -1,4 +1,4 @@
-import HeroRightBackground from 'assets/images/landing/blue-background.png';
+import HeroRightBackground from 'assets/images/homepage/landing/blue-background.png';
 import { useDefaultGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Input, Text } from 'ui';
@@ -40,7 +40,7 @@ const HeroRight = () => {
 const HeroLeft = () => {
   return (
     <Content>
-      <Header>A better way to connect with your customers</Header>
+      <Header as="h1">A better way to connect with your customers</Header>
       <Text className={styles.subtext} subtext>
         AI-based omnichannel shared inbox for customer support over Voice,
         Email, Live Chat, SMS, and WhatsApp.

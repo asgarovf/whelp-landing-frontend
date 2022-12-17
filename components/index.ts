@@ -1,6 +1,12 @@
 export { DocumentHead } from './DocumentHead/DocumentHead';
 export { DualGrid } from './DualGrid/DualGrid';
 export { Navbar } from './Navbar/Navbar';
-export { Hero } from './Hero/Hero';
+export { Hero } from './homepage/Hero/Hero';
 export { CRM } from './CRM/CRM';
-export { Inbox } from './Inbox/Inbox';
+export { Inbox } from './homepage/Inbox/Inbox';
+export { HomepageReports } from './homepage/HomepageReports/HomepageReports';
+export { Quote } from './Quote/Quote';
+export { HomepageOutbound } from './homepage/HomepageOutbound/HomepageOutbound';
+export { Chatbot } from './homepage/Chatbot/Chatbot';
+export { WhyCompany } from './WhyCompany/WhyCompany';
+export { Features } from './Features/Features';

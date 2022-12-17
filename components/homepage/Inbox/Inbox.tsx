@@ -1,5 +1,5 @@
 import { ArrowRight } from 'assets/icons';
-import InboxBackgroundImage from 'assets/images/inbox/left.png';
+import InboxBackgroundImage from 'assets/images/homepage/inbox/left.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Icon, Text } from 'ui';
