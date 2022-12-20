@@ -28,7 +28,7 @@ export const Input = ({
 
   return (
     <div
-      className={clsnm(wrapperProps?.className, className, styles.wrapper)}
+      className={clsnm(wrapperProps?.className, styles.wrapper)}
       style={{
         borderBottomLeftRadius: bottomLeftRadius,
         borderTopLeftRadius: topLeftRadius,

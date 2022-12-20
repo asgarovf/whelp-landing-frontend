@@ -10,3 +10,4 @@ export { HomepageOutbound } from './homepage/HomepageOutbound/HomepageOutbound';
 export { Chatbot } from './homepage/Chatbot/Chatbot';
 export { WhyCompany } from './WhyCompany/WhyCompany';
 export { Features } from './Features/Features';
+export { Integrations } from './homepage/Integrations/Integrations';

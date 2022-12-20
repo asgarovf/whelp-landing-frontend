@@ -34,6 +34,7 @@ export const DualGrid = ({
   reverseOnMobile = false,
   leftClassName,
   rightClassName,
+  className,
   ...props
 }: Props) => {
   const small = useSmall();
@@ -59,7 +60,11 @@ export const DualGrid = ({
         paddingTop: paddingTop ?? _paddingY,
         paddingBottom: paddingBottom ?? _paddingY,
       }}
-      className={clsnm(styles.wrapper, maxHeight && styles.maxHeight)}
+      className={clsnm(
+        styles.wrapper,
+        maxHeight && styles.maxHeight,
+        className,
+      )}
       {...props}
     >
       <div

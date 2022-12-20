@@ -1,4 +1,3 @@
-import { Shield } from 'assets/icons';
 import Seymur from 'assets/images/homepage/quote/seymur.png';
 import {
   CRM,
@@ -9,26 +8,26 @@ import {
   HomepageOutbound,
   HomepageReports,
   Inbox,
+  Integrations,
   Navbar,
   Quote,
   WhyCompany,
 } from 'components';
+import { useSmall } from 'hooks';
 import { useMemo } from 'react';
+import styles from 'styles/pages/index.module.scss';
 import { FeatureItem } from 'types';
 import { Container, Layout } from 'ui';
+import { homeData } from 'utils/data';
+
+import { Footer } from 'components/Footer/Footer';
 
 export default function Home() {
   const items = useMemo((): FeatureItem[] => {
-    return [
-      {
-        icon: <Shield />,
-        title: 'Security first',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et elit eu mauris lobortis fringilla a eu lectus. ',
-        color: `var(--subtext)`,
-      },
-    ];
+    return homeData;
   }, []);
+
+  const small = useSmall();
 
   return (
     <>
@@ -55,6 +54,13 @@ export default function Home() {
         <Container>
           <Features items={items} />
         </Container>
+        <Container className={styles.integrations}>
+          <Integrations />
+        </Container>
+        <div className={styles.integrationsSm}>
+          <Integrations />
+        </div>
+        <Footer />
       </Layout>
     </>
   );

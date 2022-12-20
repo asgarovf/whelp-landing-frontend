@@ -8,7 +8,7 @@ export type DynamicBorderRadiusProps = {
 };
 
 export type FeatureItem = {
-  color: string;
+  color: 'green' | 'purple' | 'blue' | 'yellow' | 'pink' | 'orange';
   icon: ReactNode;
   title: string;
   content: string;

@@ -15,6 +15,97 @@
     height: 100%;
     object-fit: contain;
   }
+
+  & .model {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 100%;
+    z-index: 4;
+  }
+
+  & .topRight {
+    position: absolute;
+    top: 27%;
+    right: 5%;
+    width: 176px;
+    height: 100px;
+    z-index: 6;
+
+    @media (max-width: $bp-md) {
+      width: 140px;
+      height: 80px;
+    }
+
+    @media (max-width: 540px) {
+      width: 120px;
+      height: 64px;
+    }
+  }
+
+  & .leftCenter {
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 180px;
+    height: 92px;
+    z-index: 2;
+    transform: translateY(-60%);
+
+    @media (max-width: $bp-md) {
+      width: 140px;
+      height: 73px;
+      left: 0%;
+      z-index: 4;
+    }
+
+    @media (max-width: 540px) {
+      width: 112px;
+      height: 58px;
+    }
+  }
+
+  & .bottomRight {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 248px;
+    height: 84px;
+    z-index: 4;
+
+    @media (max-width: $bp-md) {
+      width: 180px;
+      height: 59px;
+    }
+
+    @media (max-width: 540px) {
+      width: 160px;
+      height: 52px;
+    }
+  }
+
+  & .lineBottom {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -8px;
+    bottom: 0px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  & .lineTop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: -8px;
+    bottom: 0px;
+    overflow: hidden;
+    top: 0px;
+  }
 }
 
 .right {
@@ -41,7 +132,44 @@
   align-items: center;
 
   @media (max-width: $bp-sm) {
+    flex-direction: column;
     width: 100%;
     justify-content: center;
+  }
+}
+
+.input {
+  border: 2px solid var(--wh-black);
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-right: 0px;
+
+  @media (max-width: $bp-sm) {
+    border-right: 2px solid var(--wh-black);
+    border-top-right-radius: 60px !important;
+    border-bottom-right-radius: 60px !important;
+    text-align: center;
+  }
+}
+
+.inputEl {
+  @media (max-width: $bp-sm) {
+    text-align: center;
+  }
+}
+
+.button {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+
+  @media (max-width: $bp-sm) {
+    text-align: center;
+    width: 100%;
+    margin-top: 16px;
+    border-top-left-radius: none;
+    border-bottom-left-radius: none;
+
+    border-top-left-radius: 60px !important;
+    border-bottom-left-radius: 60px !important;
   }
 }

@@ -1,26 +1,27 @@
 import { ArrowRight } from 'assets/icons';
-import OutboundBackgroundImage from 'assets/images/homepage/outbound/left.png';
+import IntegrationsBackgroundImage from 'assets/images/homepage/integrations/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Icon, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './HomepageOutbound.module.scss';
+import styles from './Integrations.module.scss';
 
-export const HomepageOutbound = () => {
+export const Integrations = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
-    large: 120,
+    large: 90,
   });
 
   return (
     <DualGrid
-      reverseOnMobile
-      paddingY={80}
-      rightClassName={styles.right}
+      className={styles.bg}
       gap={gap}
+      paddingY={80}
+      leftClassName={styles.left}
+      rightClassName={styles.right}
       left={<Left />}
       right={<Right />}
     />
@@ -29,12 +30,26 @@ export const HomepageOutbound = () => {
 
 const Right = () => {
   return (
+    <div className={styles.imageWrapper}>
+      <div className={styles.inner}>
+        <Image
+          loading="lazy"
+          className={styles.imageBg}
+          src={IntegrationsBackgroundImage}
+          alt="Chatbot background"
+        />
+      </div>
+    </div>
+  );
+};
+
+const Left = () => {
+  return (
     <Content>
-      <Header inheritStyles="h1" as="h3">
-        Automate your campaign
-      </Header>
+      <Header as="h2">Explore integrations</Header>
       <Text className={styles.subtext} subtext>
-        Send bulk messages via WhatsApp, Telegram, Email, Facebook Messenger.
+        Our integrations make it easy to work with the applications your teams
+        already love.
       </Text>
       <Button
         className={styles.button}
@@ -49,19 +64,5 @@ const Right = () => {
         Learn more
       </Button>
     </Content>
-  );
-};
-
-const Left = () => {
-  return (
-    <div className={styles.imageWrapper}>
-      <div className={styles.inner}>
-        <Image
-          className={styles.imageBg}
-          src={OutboundBackgroundImage}
-          alt="Inbox background"
-        />
-      </div>
-    </div>
   );
 };

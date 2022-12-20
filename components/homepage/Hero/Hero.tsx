@@ -1,4 +1,10 @@
-import HeroRightBackground from 'assets/images/homepage/landing/blue-background.png';
+import HeroRightBackground from 'assets/images/homepage/landing/blue-bg.png';
+import HeroRightBottomRight from 'assets/images/homepage/landing/bottom-right.png';
+import HeroRightLeftCenter from 'assets/images/homepage/landing/left-center.png';
+import HeroRightLineBottom from 'assets/images/homepage/landing/line-bottom.png';
+import HeroRightLineTop from 'assets/images/homepage/landing/line-top.png';
+import HeroRightModelfrom from 'assets/images/homepage/landing/model.png';
+import HeroRightTopRight from 'assets/images/homepage/landing/top-right.png';
 import { useDefaultGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Input, Text } from 'ui';
@@ -32,6 +38,42 @@ const HeroRight = () => {
           src={HeroRightBackground}
           alt="Hero background"
         />
+        <Image
+          loading="lazy"
+          className={styles.model}
+          src={HeroRightModelfrom}
+          alt="Hero model"
+        />
+        <Image
+          loading="lazy"
+          className={styles.topRight}
+          src={HeroRightTopRight}
+          alt="Hero top right"
+        />
+        <Image
+          loading="lazy"
+          className={styles.leftCenter}
+          src={HeroRightLeftCenter}
+          alt="Hero left center"
+        />
+        <Image
+          loading="lazy"
+          className={styles.bottomRight}
+          src={HeroRightBottomRight}
+          alt="Hero bottom right"
+        />
+        <Image
+          loading="lazy"
+          className={styles.lineBottom}
+          src={HeroRightLineBottom}
+          alt="Hero line bottom"
+        />
+        <Image
+          loading="lazy"
+          className={styles.lineTop}
+          src={HeroRightLineTop}
+          alt="Hero line top"
+        />
       </div>
     </div>
   );
@@ -47,15 +89,16 @@ const HeroLeft = () => {
       </Text>
       <div className={styles.formWrapper}>
         <Input
-          disableRightBorder
-          topRightRadius="0px"
-          bottomRightRadius="0px"
-          width="95%"
+          placeholder="Enter your email"
+          wrapperProps={{
+            className: styles.input,
+          }}
+          className={styles.inputEl}
+          width="100%"
           height="52px"
         />
         <Button
-          topLeftRadius="0px"
-          bottomLeftRadius="0px"
+          className={styles.button}
           color="black"
           height="52px"
           paddingX="28px"

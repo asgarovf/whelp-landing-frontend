@@ -1,0 +1,17 @@
+@import 'styles/vars.scss';
+
+.integrations {
+  display: flex;
+
+  @media (max-width: $bp-sm) {
+    display: none;
+  }
+}
+
+.integrationsSm {
+  display: none;
+
+  @media (max-width: $bp-sm) {
+    display: flex;
+  }
+}
