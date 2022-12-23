@@ -128,8 +128,8 @@ const ButtonDropdown = ({
   dropdownProps?: ComponentPropsWithoutRef<'div'>;
 }) => {
   return (
-    <div className={styles.dropdownWrapper}>
-      <div {...dropdownProps} className={styles.dropdown}>
+    <div {...dropdownProps} className={styles.dropdownWrapper}>
+      <div className={styles.dropdown}>
         <Text
           className={clsnm(
             styles.text,

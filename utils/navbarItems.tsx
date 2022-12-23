@@ -1,11 +1,23 @@
 import {
   AppStore,
+  Bolt,
   Bot,
+  Building,
   ChartBar,
   Chats,
   Clipboard,
+  Edit,
+  FileText,
+  HeartRate,
   Inbox,
+  Info,
+  Mail,
   Navigation,
+  Play,
+  Question,
+  Rocket,
+  Shield,
+  ShoppingCart,
   Users,
 } from 'assets/icons';
 import { ReactNode } from 'react';
@@ -63,17 +75,17 @@ export const solutionItems: DropdownItem[] = [
   {
     name: 'E-commerce',
     link: '#',
-    icon: <AppStore />,
+    icon: <ShoppingCart />,
   },
   {
     name: 'Startup',
     link: '#',
-    icon: <Chats />,
+    icon: <Rocket />,
   },
   {
     name: 'Enterprise',
     link: '#',
-    icon: <Clipboard />,
+    icon: <Building />,
   },
 ];
 
@@ -81,27 +93,27 @@ export const resourcesItems: DropdownItem[] = [
   {
     name: 'Blog',
     link: '#',
-    icon: <AppStore />,
+    icon: <Edit />,
   },
   {
     name: 'Help center',
     link: '#',
-    icon: <Chats />,
+    icon: <Question />,
   },
   {
     name: `What's new`,
     link: '#',
-    icon: <Clipboard />,
+    icon: <Bolt />,
   },
   {
     name: 'Watch demo',
     link: '#',
-    icon: <Clipboard />,
+    icon: <Play />,
   },
   {
     name: 'Status',
     link: '#',
-    icon: <Clipboard />,
+    icon: <HeartRate />,
   },
 ];
 
@@ -109,21 +121,21 @@ export const companyItems: DropdownItem[] = [
   {
     name: 'About',
     link: '#',
-    icon: <AppStore />,
+    icon: <Info />,
   },
   {
     name: 'Contact',
     link: '#',
-    icon: <Chats />,
+    icon: <Mail />,
   },
   {
     name: 'Privacy policy',
     link: '#',
-    icon: <Clipboard />,
+    icon: <Shield />,
   },
   {
     name: 'Terms of servcice',
     link: '#',
-    icon: <Clipboard />,
+    icon: <FileText />,
   },
 ];

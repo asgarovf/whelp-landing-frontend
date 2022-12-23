@@ -47,7 +47,7 @@
 .links {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(5, minmax(min-content, 100px));
+  grid-template-columns: repeat(5, minmax(min-content, 60px));
   margin-left: 48px;
   gap: 16px;
 
@@ -78,11 +78,20 @@
   display: flex;
   align-items: center;
   padding: 12px;
+  border-radius: 12px;
 
   & .linkText {
     margin-top: 0px !important;
     margin-left: 12px;
     white-space: nowrap;
+  }
+
+  &:hover {
+    background-color: var(--wh-steel-0);
+  }
+
+  &:active {
+    background-color: var(--wh-steel-0);
   }
 }
 
@@ -90,7 +99,6 @@
   display: flex;
   position: relative;
   z-index: 10;
-  padding: 12px;
   width: max-content;
 }
 
