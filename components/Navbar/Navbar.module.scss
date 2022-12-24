@@ -1,11 +1,22 @@
 @import 'styles/vars.scss';
 
 .wrapper {
+  z-index: 1000;
   display: flex;
   align-items: center;
   width: 100%;
   background-color: var(--main);
   height: var(--navbar-height);
+  position: fixed !important;
+  left: 0;
+  top: 0;
+
+  &.scrolled {
+    &.closed {
+      box-shadow: 0px -0.5px 4px rgba(0, 0, 0, 0.08),
+        0px 0px 0.5px rgba(0, 0, 0, 0.16), 0px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+  }
 
   @media (max-width: $bp-sm) {
     height: var(--navbar-height-sm);
@@ -87,7 +98,7 @@
   }
 
   &:hover {
-    background-color: var(--wh-steel-0);
+    background-color: var(--wh-neutral-0);
   }
 
   &:active {
@@ -119,4 +130,86 @@
   top: 0px;
   left: 50%;
   transform: translate(-50%, -14px);
+}
+
+.hamburger {
+  display: none;
+
+  @media (max-width: $bp-lg) {
+    display: block;
+  }
+}
+
+// Small
+
+.navbarSmall {
+  z-index: 1001;
+  height: calc(100vh - var(--navbar-height-sm));
+  width: 100vw;
+  background-color: var(--main);
+  position: fixed;
+  left: 0;
+  top: var(--navbar-height-sm);
+  padding: 8px 24px;
+  flex-direction: column;
+  overflow-y: auto;
+
+  display: none;
+  @media (max-width: $bp-lg) {
+    display: flex;
+  }
+}
+
+.smallItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.smallText {
+  margin-top: 0px;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.smallIcon {
+  margin-left: auto;
+}
+
+.smallItemWrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px 0px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navigationMenu {
+  margin-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navigationMenuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--wh-neutral-0);
+  }
+
+  &:active {
+    background-color: var(--wh-steel-0);
+  }
+}
+
+.navigationMenuItemIcon {
+  margin-right: 12px;
+}
+
+.navigationMenuItemText {
+  margin-top: 0px !important;
 }
