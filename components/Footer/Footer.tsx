@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter } from 'assets/icons';
 import LogoSm from 'assets/images/logo-sm.svg';
+import Link from 'next/link';
 import { ComponentPropsWithoutRef } from 'react';
 import { Button, Container, Header, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
@@ -47,14 +48,14 @@ export const Footer = ({ include = true }: Props) => {
                 <Text className={styles.colHeader}>{item.header}</Text>
                 <div className={styles.colItems}>
                   {item.items.map((item, key) => (
-                    <a
+                    <Link
                       key={key}
-                      href={item.href}
+                      href={item.link}
                       referrerPolicy="no-referrer"
                       className={clsnm(styles.colText, 'poppins')}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

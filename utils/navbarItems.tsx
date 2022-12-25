@@ -31,7 +31,7 @@ export type DropdownItem = {
 export const productItems: DropdownItem[] = [
   {
     name: 'Inbox',
-    link: '#',
+    link: '/inbox',
     icon: <Inbox />,
   },
   {

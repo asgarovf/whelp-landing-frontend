@@ -1,6 +1,6 @@
 @import 'styles/vars.scss';
 
-.integrations {
+.lg {
   display: flex;
 
   @media (max-width: $bp-sm) {
@@ -8,7 +8,7 @@
   }
 }
 
-.integrationsSm {
+.sm {
   display: none;
 
   @media (max-width: $bp-sm) {

@@ -2,6 +2,7 @@ import Seymur from 'assets/images/homepage/quote/seymur.png';
 import {
   CRM,
   Chatbot,
+  ContainerOnlyDesktop,
   DocumentHead,
   Features,
   Hero,
@@ -15,7 +16,6 @@ import {
 } from 'components';
 import { useSmall } from 'hooks';
 import { useMemo } from 'react';
-import styles from 'styles/pages/index.module.scss';
 import { FeatureItem } from 'types';
 import { Container, Layout } from 'ui';
 import { homeData } from 'utils/data';
@@ -54,12 +54,9 @@ export default function Home() {
         <Container>
           <Features items={items} />
         </Container>
-        <Container className={styles.integrations}>
+        <ContainerOnlyDesktop>
           <Integrations />
-        </Container>
-        <div className={styles.integrationsSm}>
-          <Integrations />
-        </div>
+        </ContainerOnlyDesktop>
         <Footer />
       </Layout>
     </>

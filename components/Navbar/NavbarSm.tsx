@@ -1,6 +1,7 @@
 import { animated, useSpring } from '@react-spring/web';
 import { ChevronDown, ChevronUp } from 'assets/icons';
-import { RefObject, useRef, useState } from 'react';
+import Link from 'next/link';
+import { Fragment, RefObject, useRef, useState } from 'react';
 import { Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 
@@ -8,9 +9,9 @@ import { ButtonDropdownItems, MainMenuItem } from 'components/Navbar/Navbar';
 
 import styles from './Navbar.module.scss';
 
-type Props = {};
+type Props = { close: () => void };
 
-export const NavbarSm = ({}: Props) => {
+export const NavbarSm = ({ close }: Props) => {
   const _styles = useSpring({
     from: {
       opacity: 0,
@@ -43,9 +44,9 @@ export const NavbarSm = ({}: Props) => {
   };
 
   return (
-    <animated.div className={styles.navbarSmall} style={_styles}>
+    <animated.div className={clsnm(styles.navbarSmall)} style={_styles}>
       {ButtonDropdownItems.map((item) => (
-        <>
+        <Fragment key={item.key}>
           <div
             onClick={() => {
               const newValue = !toggleState[item.key];
@@ -80,19 +81,21 @@ export const NavbarSm = ({}: Props) => {
                 styles.navigationMenu,
               )}
             >
-              {item.items?.map((i) => (
-                <div className={styles.navigationMenuItem}>
-                  <Icon size={24} className={styles.navigationMenuItemIcon}>
-                    {i.icon}
-                  </Icon>
-                  <Text className={styles.navigationMenuItemText}>
-                    {i.name}
-                  </Text>
-                </div>
+              {item.items?.map((i, key) => (
+                <Link key={key} href={i.link} legacyBehavior>
+                  <div onClick={close} className={styles.navigationMenuItem}>
+                    <Icon size={24} className={styles.navigationMenuItemIcon}>
+                      {i.icon}
+                    </Icon>
+                    <Text className={styles.navigationMenuItemText}>
+                      {i.name}
+                    </Text>
+                  </div>
+                </Link>
               ))}
             </div>
           )}
-        </>
+        </Fragment>
       ))}
     </animated.div>
   );

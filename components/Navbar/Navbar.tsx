@@ -15,6 +15,7 @@ import { Button, Container, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 import {
   DropdownItem,
+  companyItems,
   productItems,
   resourcesItems,
   solutionItems,
@@ -55,7 +56,7 @@ export const ButtonDropdownItems = [
   },
   {
     key: MainMenuItem.COMPANY,
-    items: productItems,
+    items: companyItems,
     name: 'Company',
   },
 ];
@@ -66,7 +67,7 @@ export const Navbar = () => {
   const navbarController = useBoolean();
   const navbarRef = useRef<HTMLDivElement>(null);
 
-  const onMouseEnterMenuitem = (e: any, item: MainMenuItem) => {
+  const onMouseEnterMenuitem = (_: any, item: MainMenuItem) => {
     setExpandedMenu(item);
 
     if (timeoutRef.current) {
@@ -77,7 +78,7 @@ export const Navbar = () => {
   const onMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setExpandedMenu(null);
-    }, 1000);
+    }, 200);
   };
 
   useEffect(() => {
@@ -113,10 +114,10 @@ export const Navbar = () => {
           !navbarController.value && styles.closed,
         )}
       >
-        <Container>
+        <Container className={styles.navbarContainer}>
           <div className={styles.inner}>
             <div className={styles.linksWrapper}>
-              <Link href="/">
+              <Link onClick={navbarController.setFalse} href="/">
                 <Logo />
               </Link>
               <div className={styles.links}>
@@ -152,12 +153,13 @@ export const Navbar = () => {
                 toggled={navbarController.value}
                 onToggle={navbarController.toggle}
                 hideOutline
+                size={24}
               />
             </div>
           </div>
         </Container>
       </div>
-      {navbarController.value && <NavbarSm />}
+      {navbarController.value && <NavbarSm close={navbarController.setFalse} />}
     </>
   );
 };

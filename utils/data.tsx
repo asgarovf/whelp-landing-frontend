@@ -7,6 +7,12 @@ import {
   Users,
 } from 'assets/icons';
 import { FeatureItem } from 'types';
+import {
+  companyItems,
+  productItems,
+  resourcesItems,
+  solutionItems,
+} from 'utils/navbarItems';
 
 export const homeData: FeatureItem[] = [
   {
@@ -56,122 +62,38 @@ export const homeData: FeatureItem[] = [
 export const footerData = [
   {
     header: 'Products',
-    items: [
-      {
-        name: 'Inbox',
-        href: '/',
-      },
-      {
-        name: 'CRM',
-        href: '/',
-      },
-      {
-        name: 'Reporting',
-        href: '/',
-      },
-      {
-        name: 'Chatbot',
-        href: '/',
-      },
-      {
-        name: 'Outbound',
-        href: '/',
-      },
-      {
-        name: 'Integrations',
-        href: '/',
-      },
-      {
-        name: 'Livechat',
-        href: '/',
-      },
-      {
-        name: 'CSAT',
-        href: '/',
-      },
-    ],
+    items: productItems,
   },
   {
     header: 'Solutions',
-    items: [
-      {
-        name: 'E-commerce',
-        href: '/',
-      },
-      {
-        name: 'Startup',
-        href: '/',
-      },
-      {
-        name: 'Enterprise',
-        href: '/',
-      },
-    ],
+    items: solutionItems,
   },
   {
     header: 'Resources',
-    items: [
-      {
-        name: 'Blog',
-        href: '/',
-      },
-      {
-        name: 'Help center',
-        href: '/',
-      },
-      {
-        name: "What's new",
-        href: '/',
-      },
-      {
-        name: 'Watch demo',
-        href: '/',
-      },
-      {
-        name: 'Status',
-        href: '/',
-      },
-    ],
+    items: resourcesItems,
   },
   {
     header: 'Company',
-    items: [
-      {
-        name: 'About',
-        href: '/',
-      },
-      {
-        name: 'Contact',
-        href: '/',
-      },
-      {
-        name: 'Privacy policy',
-        href: '/',
-      },
-      {
-        name: 'Terms of service',
-        href: '/',
-      },
-    ],
+    items: companyItems,
   },
   {
     header: 'Compare',
     items: [
       {
         name: 'Intercom',
-        href: '/',
+        link: '/',
       },
       {
         name: 'Zendesk',
-        href: '/',
+        link: '/',
       },
       {
         name: 'HubSpot',
-        href: '/',
+        link: '/',
       },
       {
         name: 'Livechat',
-        href: '/',
+        link: '/',
       },
     ],
   },

@@ -213,3 +213,9 @@
 .navigationMenuItemText {
   margin-top: 0px !important;
 }
+
+.navbarContainer {
+  @media (max-width: $bp-sm) {
+    padding-right: 12px;
+  }
+}

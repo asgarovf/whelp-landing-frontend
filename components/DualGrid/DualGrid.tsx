@@ -21,6 +21,8 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
   rightClassName?: string;
   gap?: number;
   maxHeight?: boolean;
+  purpleBg?: boolean;
+  container?: boolean;
 }
 
 export const DualGrid = ({
@@ -35,6 +37,8 @@ export const DualGrid = ({
   leftClassName,
   rightClassName,
   className,
+  purpleBg,
+  container,
   ...props
 }: Props) => {
   const small = useSmall();
@@ -64,6 +68,8 @@ export const DualGrid = ({
         styles.wrapper,
         maxHeight && styles.maxHeight,
         className,
+        purpleBg && styles.purpleBg,
+        container && 'container',
       )}
       {...props}
     >
