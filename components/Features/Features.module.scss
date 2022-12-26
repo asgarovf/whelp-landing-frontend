@@ -35,6 +35,7 @@
   background-color: var(--wh-white);
   border: 2px solid var(--wh-black);
   border-radius: 20px;
+  opacity: 0;
 
   & .title {
     margin-top: 20px;
@@ -61,10 +62,45 @@
     align-items: center;
   }
 
+  &.fadeIn0 {
+    animation: fadeIn 0.25s linear forwards;
+  }
+
+  &.fadeIn1 {
+    animation: fadeIn 0.5s linear forwards;
+  }
+
+  &.fadeIn2 {
+    animation: fadeIn 0.75s linear forwards;
+  }
+
+  &.fadeIn3 {
+    animation: fadeIn 1s linear forwards;
+  }
+
+  &.fadeIn4 {
+    animation: fadeIn 1.25s linear forwards;
+  }
+
+  &.fadeIn5 {
+    animation: fadeIn 1.5s linear forwards;
+  }
+
   @media (max-width: $bp-sm) {
     min-height: 288px;
     margin-right: 20px;
     max-width: 288px;
     padding: 24px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

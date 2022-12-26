@@ -82,7 +82,9 @@ const HeroRight = () => {
 const HeroLeft = () => {
   return (
     <Content>
-      <Header as="h1">A better way to connect with your customers</Header>
+      <Header inheritStyles="hero" as="h1">
+        A better way to connect with your customers
+      </Header>
       <Text className={styles.subtext} subtext>
         AI-based omnichannel shared inbox for customer support over Voice,
         Email, Live Chat, SMS, and WhatsApp.

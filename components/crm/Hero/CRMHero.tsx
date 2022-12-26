@@ -44,7 +44,9 @@ const HeroRight = () => {
 const HeroLeft = () => {
   return (
     <Content className={styles.content}>
-      <Header as="h1">CRM that you’ve been looking for</Header>
+      <Header inheritStyles="hero" as="h1">
+        CRM that you’ve been looking for
+      </Header>
       <Text className={styles.subtext} subtext>
         Upgrade your customer support with our features. We collect all of your
         user data on one platform.

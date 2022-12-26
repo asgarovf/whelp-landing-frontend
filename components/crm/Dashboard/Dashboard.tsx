@@ -8,7 +8,7 @@ export const Dashboard = () => {
     <div className={styles.wrapper}>
       <Container>
         <div className={styles.content}>
-          <Header className={styles.header} as="h2">
+          <Header inheritStyles="h1" className={styles.header} as="h2">
             All in one dashboard
           </Header>
           <Text className={styles.text} subtext>

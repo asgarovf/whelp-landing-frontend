@@ -12,7 +12,7 @@ export const Integrations = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
-    large: 90,
+    large: 24,
   });
 
   return (

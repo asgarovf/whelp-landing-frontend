@@ -44,7 +44,9 @@ const HeroRight = () => {
 const HeroLeft = () => {
   return (
     <Content className={styles.content}>
-      <Header as="h1">Manage all your conversations in one place</Header>
+      <Header inheritStyles="hero" as="h1">
+        Manage all your conversations in one place
+      </Header>
       <Text className={styles.subtext} subtext>
         We created a single inbox across phone, email, chat and messaging apps
         to manage and respond to all conversations.

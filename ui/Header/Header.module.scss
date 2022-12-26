@@ -1,8 +1,23 @@
 @import 'styles/vars.scss';
 
 .header {
-  &.h1 {
+  &.hero {
     font-size: 56px;
+    font-weight: 400;
+    margin: 0px;
+
+    @media (max-width: $bp-md) {
+      font-size: 40px;
+    }
+
+    @media (max-width: $bp-sm) {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  &.h1 {
+    font-size: 48px;
     font-weight: 400;
     margin: 0px;
 

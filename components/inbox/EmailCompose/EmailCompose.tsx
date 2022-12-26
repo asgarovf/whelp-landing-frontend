@@ -11,7 +11,7 @@ export const EmailCompose = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
-    large: 100,
+    large: 24,
   });
 
   return (

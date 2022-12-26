@@ -17,6 +17,15 @@
 
 .right {
   justify-content: center;
+  padding-left: 80px;
+
+  @media (max-width: $bp-md) {
+    padding-left: 60px;
+  }
+
+  @media (max-width: $bp-sm) {
+    padding-left: 0px;
+  }
 }
 
 .imageWrapper {
