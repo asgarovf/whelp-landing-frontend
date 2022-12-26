@@ -49,6 +49,7 @@
     color: var(--wh-blue-20);
     font-weight: 500 !important;
     text-align: center;
+    line-height: 64px !important;
 
     @media (max-width: $bp-sm) {
       font-size: 32px !important;
