@@ -1,13 +1,13 @@
-import InboxBackgroundImage from 'assets/images/inbox/inbox-ui/left.png';
+import BackgroundImage from 'assets/images/outbound/schedule/left.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Content, Header, Icon, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './InboxUI.module.scss';
+import styles from './Schedule.module.scss';
 
-export const InboxUI = () => {
+export const Schedule = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
@@ -46,8 +46,8 @@ const Left = () => {
       <div className={styles.inner}>
         <Image
           className={styles.imageBg}
-          src={InboxBackgroundImage}
-          alt="Inbox background"
+          src={BackgroundImage}
+          alt="Schedule background"
         />
       </div>
     </div>

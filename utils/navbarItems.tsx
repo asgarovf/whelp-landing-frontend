@@ -41,17 +41,17 @@ export const productItems: DropdownItem[] = [
   },
   {
     name: 'Reporting',
-    link: '#',
+    link: '/reporting',
     icon: <ChartBar />,
   },
   {
     name: 'Chatbot',
-    link: '#',
+    link: '/chatbot',
     icon: <Bot />,
   },
   {
     name: 'Outbound',
-    link: '#',
+    link: '/outbound',
     icon: <Navigation />,
   },
   {
@@ -59,16 +59,16 @@ export const productItems: DropdownItem[] = [
     link: '#',
     icon: <AppStore />,
   },
-  {
-    name: 'Livechat',
-    link: '#',
-    icon: <Chats />,
-  },
-  {
-    name: 'CSAT',
-    link: '#',
-    icon: <Clipboard />,
-  },
+  // {
+  //   name: 'Livechat',
+  //   link: '#',
+  //   icon: <Chats />,
+  // },
+  // {
+  //   name: 'CSAT',
+  //   link: '#',
+  //   icon: <Clipboard />,
+  // },
 ];
 
 export const solutionItems: DropdownItem[] = [

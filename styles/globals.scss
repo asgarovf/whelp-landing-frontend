@@ -39,3 +39,19 @@ a {
 .purpleBg {
   background-color: var(--wh-purple-5);
 }
+
+.pmb {
+  margin-bottom: 40px;
+
+  @media (max-width: $bp-sm) {
+    margin-bottom: 20px;
+  }
+}
+
+.pmt {
+  margin-top: 40px;
+
+  @media (max-width: $bp-sm) {
+    margin-top: 20px;
+  }
+}
