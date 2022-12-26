@@ -1,13 +1,13 @@
-import BackgroundImage from 'assets/images/inbox/user-details/right.png';
+import BackgroundImage from 'assets/images/inbox/call/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Content, Header, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './UserDetails.module.scss';
+import styles from './Call.module.scss';
 
-export const UserDetails = () => {
+export const Call = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
@@ -16,7 +16,6 @@ export const UserDetails = () => {
 
   return (
     <DualGrid
-      className={styles.wrapper}
       paddingY={80}
       leftClassName={styles.left}
       gap={gap}
@@ -47,7 +46,7 @@ const Right = () => {
         <Image
           className={styles.imageBg}
           src={BackgroundImage}
-          alt="User details customize background"
+          alt="Call inbox background"
         />
       </div>
     </div>

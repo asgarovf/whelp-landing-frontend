@@ -1,20 +1,5 @@
 @import 'styles/vars.scss';
 
-.subtext {
-  margin-top: 20px;
-  max-width: 85%;
-
-  @media (max-width: $bp-sm) {
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-  }
-}
-
-.right {
-  justify-content: center;
-}
-
 .imageWrapper {
   display: flex;
   width: 100%;
@@ -32,10 +17,31 @@
   }
 }
 
-.wrapper {
-  padding-bottom: 120px !important;
+.right {
+  align-items: center;
+}
+
+.left {
+  justify-content: center;
+}
+
+.subtext {
+  margin-top: 20px;
 
   @media (max-width: $bp-sm) {
-    padding-bottom: 60px !important;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.button {
+  margin-top: 32px;
+}
+
+.content {
+  max-width: 85%;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
   }
 }

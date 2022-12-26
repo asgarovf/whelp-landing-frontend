@@ -14,7 +14,6 @@ import {
   Quote,
   WhyCompany,
 } from 'components';
-import { useSmall } from 'hooks';
 import { useMemo } from 'react';
 import { FeatureItem } from 'types';
 import { Container, Layout } from 'ui';
@@ -26,8 +25,6 @@ export default function Home() {
   const items = useMemo((): FeatureItem[] => {
     return homeData;
   }, []);
-
-  const small = useSmall();
 
   return (
     <>

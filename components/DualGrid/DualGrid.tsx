@@ -4,8 +4,11 @@ import {
   ReactNode,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { mergeRefs } from 'react-merge-refs';
 import { clsnm } from 'utils/clsnm';
 
 import styles from './DualGrid.module.scss';
@@ -24,6 +27,15 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
   purpleBg?: boolean;
   container?: boolean;
 }
+
+const fadeIn = [
+  { opacity: 0, transform: 'translateY(50px)' },
+  { opacity: 1, transform: 'translateY(0px)' },
+];
+const timing = {
+  duration: 400,
+  iterations: 1,
+};
 
 export const DualGrid = ({
   paddingY = 80,
@@ -44,6 +56,8 @@ export const DualGrid = ({
   const small = useSmall();
   const [pY, setPY] = useState(0);
   const [_gap, setGap] = useState(0);
+  const leftAnimatedRef = useRef(false);
+  const rightAnimatedRef = useRef(false);
 
   useEffect(() => {
     setPY(small ? Math.floor(paddingY / 2) : paddingY);
@@ -56,6 +70,30 @@ export const DualGrid = ({
   const _paddingY = useMemo(() => {
     return `${pY}px`;
   }, [small, pY]);
+
+  const [leftViewRef, inViewLeft] = useInView({ threshold: 0.5 });
+  const [rightViewRef, inViewRight] = useInView({ threshold: 0.5 });
+
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (leftRef.current == null || leftAnimatedRef.current) return;
+    if (inViewLeft) {
+      leftRef.current.animate(fadeIn, timing);
+      leftRef.current.style.opacity = '1';
+      leftAnimatedRef.current = true;
+    }
+  }, [inViewLeft]);
+
+  useEffect(() => {
+    if (rightRef.current == null || rightAnimatedRef.current) return;
+    if (inViewRight) {
+      rightRef.current.animate(fadeIn, timing);
+      rightRef.current.style.opacity = '1';
+      rightAnimatedRef.current = true;
+    }
+  }, [inViewRight]);
 
   return (
     <div
@@ -74,6 +112,8 @@ export const DualGrid = ({
       {...props}
     >
       <div
+        style={{ opacity: 0 }}
+        ref={mergeRefs([leftViewRef, leftRef])}
         className={clsnm(
           styles.left,
           reverseOnMobile && styles.orderSecond,
@@ -83,6 +123,8 @@ export const DualGrid = ({
         {left}
       </div>
       <div
+        style={{ opacity: 0 }}
+        ref={mergeRefs([rightViewRef, rightRef])}
         className={clsnm(
           styles.right,
           reverseOnMobile && styles.orderFirst,

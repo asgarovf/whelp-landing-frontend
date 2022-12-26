@@ -1,24 +1,24 @@
-import BackgroundImage from 'assets/images/inbox/user-details/right.png';
+import BackgroundImage from 'assets/images/inbox/schedule/left.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Content, Header, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './UserDetails.module.scss';
+import styles from './Schedule.module.scss';
 
-export const UserDetails = () => {
+export const Schedule = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
-    large: 85,
+    large: 100,
   });
 
   return (
     <DualGrid
-      className={styles.wrapper}
+      reverseOnMobile
       paddingY={80}
-      leftClassName={styles.left}
+      rightClassName={styles.right}
       gap={gap}
       left={<Left />}
       right={<Right />}
@@ -26,28 +26,28 @@ export const UserDetails = () => {
   );
 };
 
-const Left = () => {
+const Right = () => {
   return (
     <Content>
-      <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+      <Header inheritStyles="h1" as="h3">
+        Manage all your conversations in one place
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        We created a single inbox across phone, email, chat and messaging apps
+        to manage and respond to all conversations.
       </Text>
     </Content>
   );
 };
 
-const Right = () => {
+const Left = () => {
   return (
     <div className={styles.imageWrapper}>
       <div className={styles.inner}>
         <Image
           className={styles.imageBg}
           src={BackgroundImage}
-          alt="User details customize background"
+          alt="Schedule inbox background"
         />
       </div>
     </div>

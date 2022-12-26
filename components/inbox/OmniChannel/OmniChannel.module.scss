@@ -36,10 +36,35 @@
   width: 100%;
   padding: 56px 0px;
   display: flex;
+  overflow-x: hidden;
   border-radius: 32px;
   margin-top: 48px;
 
   @media (max-width: $bp-sm) {
     margin-top: 40px;
+    border-radius: 0px;
+  }
+}
+
+.channelWrapper {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  animation: anim 60s linear infinite;
+}
+
+.image {
+  height: 48px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-2000px);
   }
 }

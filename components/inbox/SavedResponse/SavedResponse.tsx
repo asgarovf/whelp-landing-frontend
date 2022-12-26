@@ -47,7 +47,7 @@ const Left = () => {
         <Image
           className={styles.imageBg}
           src={BackgroundImage}
-          alt="Email inbox background"
+          alt="Saved response inbox background"
         />
       </div>
     </div>

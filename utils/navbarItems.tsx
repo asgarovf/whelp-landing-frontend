@@ -36,7 +36,7 @@ export const productItems: DropdownItem[] = [
   },
   {
     name: 'CRM',
-    link: '#',
+    link: '/crm',
     icon: <Users />,
   },
   {
@@ -134,7 +134,7 @@ export const companyItems: DropdownItem[] = [
     icon: <Shield />,
   },
   {
-    name: 'Terms of servcice',
+    name: 'Terms of service',
     link: '#',
     icon: <FileText />,
   },
