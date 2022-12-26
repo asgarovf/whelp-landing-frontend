@@ -9,8 +9,8 @@ export default function Home() {
         <Navbar />
         <Container>
           <CRMHero />
-          <Dashboard />
         </Container>
+        <Dashboard />
         <Footer />
       </Layout>
     </>

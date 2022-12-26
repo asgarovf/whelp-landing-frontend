@@ -33,6 +33,7 @@
     width: 176px;
     height: 100px;
     z-index: 2;
+    animation: downAndUp 5s linear infinite;
 
     @media (max-width: $bp-md) {
       width: 140px;
@@ -54,6 +55,7 @@
     height: 92px;
     z-index: 2;
     transform: translateY(-60%);
+    animation: downAndUp 6s linear infinite;
 
     @media (max-width: $bp-md) {
       width: 140px;
@@ -75,6 +77,7 @@
     width: 248px;
     height: 84px;
     z-index: 6;
+    animation: downAndUp 7s linear infinite;
 
     @media (max-width: $bp-md) {
       width: 180px;
@@ -172,5 +175,23 @@
 
     border-top-left-radius: 60px !important;
     border-bottom-left-radius: 60px !important;
+  }
+}
+
+@keyframes downAndUp {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
