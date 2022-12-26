@@ -56,7 +56,7 @@ export const productItems: DropdownItem[] = [
   },
   {
     name: 'Integrations',
-    link: '#',
+    link: '/integrations',
     icon: <AppStore />,
   },
   // {

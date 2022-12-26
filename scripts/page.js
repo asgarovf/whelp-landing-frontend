@@ -30,11 +30,15 @@ function createImageLeftComponent() {
     exit(1);
   }
 
-  fs.writeFile(`${folderRoot}/${fileName}.tsx`, leftImageTemplateTSX, (err) => {
-    console.log(err);
-  });
+  fs.writeFileSync(
+    `${folderRoot}/${fileName}.tsx`,
+    leftImageTemplateTSX,
+    (err) => {
+      console.log(err);
+    },
+  );
 
-  fs.writeFile(
+  fs.writeFileSync(
     `${folderRoot}/${fileName}.module.scss`,
     leftImageTemplateSCSS,
     (err) => {
@@ -53,7 +57,7 @@ function createImageRightComponent() {
     exit(1);
   }
 
-  fs.writeFile(
+  fs.writeFileSync(
     `${folderRoot}/${fileName}.tsx`,
     rightImageTemplateTSX,
     (err) => {
@@ -61,7 +65,7 @@ function createImageRightComponent() {
     },
   );
 
-  fs.writeFile(
+  fs.writeFileSync(
     `${folderRoot}/${fileName}.module.scss`,
     rightImageTemplateSCSS,
     (err) => {

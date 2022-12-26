@@ -2,7 +2,7 @@ import { ChevronDown, ChevronUp } from 'assets/icons';
 import LogoImage from 'assets/images/logo.svg';
 import Tip from 'assets/images/tip.svg';
 import { Cross as Hamburger } from 'hamburger-react';
-import { useBoolean } from 'hooks';
+import { useBoolean, useOnClickOutside } from 'hooks';
 import Link from 'next/link';
 import {
   ComponentPropsWithoutRef,
@@ -65,7 +65,9 @@ export const Navbar = () => {
   const [expandedMenu, setExpandedMenu] = useState<MainMenuItem | null>(null);
   const timeoutRef = useRef<any>(null);
   const navbarController = useBoolean();
-  const navbarRef = useRef<HTMLDivElement>(null);
+  const navbarRef = useOnClickOutside<HTMLDivElement>(() => {
+    setExpandedMenu(null);
+  });
 
   const onMouseEnterMenuitem = (_: any, item: MainMenuItem) => {
     setExpandedMenu(item);

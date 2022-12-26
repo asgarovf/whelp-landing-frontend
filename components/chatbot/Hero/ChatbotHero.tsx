@@ -1,14 +1,14 @@
 import { ArrowRight } from 'assets/icons';
-import HeroRightBackground from 'assets/images/outbound/hero/right.png';
+import HeroRightBackground from 'assets/images/chatbot/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
-import styles from './OutboundHero.module.scss';
+import styles from './ChatbotHero.module.scss';
 
-export const OutboundHero = () => {
+export const ChatbotHero = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
@@ -34,7 +34,7 @@ const HeroRight = () => {
           loading="lazy"
           className={styles.imageBg}
           src={HeroRightBackground}
-          alt="Outbound hero background"
+          alt="Chatbot hero background"
         />
       </div>
     </div>

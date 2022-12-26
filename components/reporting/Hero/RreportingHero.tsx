@@ -1,5 +1,5 @@
 import { ArrowRight } from 'assets/icons';
-import HeroRightBackground from 'assets/images/crm/hero/right.png';
+import HeroRightBackground from 'assets/images/reporting/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';

@@ -10,9 +10,11 @@ import Chats from './chats.svg';
 import ChevronDown from './chevron-down.svg';
 import ChevronUp from './chevron-up.svg';
 import Clipboard from './clipboard.svg';
+import Close from './close.svg';
 import Edit from './edit.svg';
 import Facebook from './facebook.svg';
 import FileText from './file-text.svg';
+import FilterList from './filter-list.svg';
 import Folder from './folder.svg';
 import HeartRate from './heart-rate.svg';
 import Inbox from './inbox.svg';
@@ -27,6 +29,7 @@ import Play from './play.svg';
 import PlusCircle from './plus-circle.svg';
 import Question from './question.svg';
 import Rocket from './rocket.svg';
+import Search from './search.svg';
 import Shield from './shield.svg';
 import ShoppingCart from './shopping-cart.svg';
 import Tag from './tag.svg';
@@ -39,13 +42,16 @@ export {
   Bot,
   Building,
   Calendar,
+  Close,
   ChevronDown,
   ChevronUp,
   ChartBar,
   Clipboard,
   ChatCircleText,
+  Search,
   Edit,
   Facebook,
+  FilterList,
   Bolt,
   FileText,
   HeartRate,
