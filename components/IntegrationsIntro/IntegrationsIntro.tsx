@@ -7,7 +7,7 @@ import {
   Search,
 } from 'assets/icons';
 import { useDropdown, useOnClickOutside } from 'hooks';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Header, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 import { IntegrationCategory } from 'utils/integrations';
@@ -37,6 +37,10 @@ export const IntegrationsIntro = ({
   );
   const [element, setElement] = useState<HTMLElement | null>(null);
 
+  const isSearchActive = useMemo(() => {
+    return search.trim() !== '' || searchFocused;
+  }, [searchFocused, search]);
+
   useEffect(() => {
     setElement(window.document.body);
   }, []);
@@ -51,11 +55,11 @@ export const IntegrationsIntro = ({
 
   useEffect(() => {
     if (inputRef.current == null) return;
-    if (searchFocused) {
+    if (isSearchActive) {
       inputRef.current.focus();
       setCategory(null);
     }
-  }, [searchFocused]);
+  }, [isSearchActive]);
 
   const { close, floating, reference, popperStyles, isOpen, open, closeRef } =
     useDropdown({ placement, topDistance: 12 });
@@ -74,7 +78,7 @@ export const IntegrationsIntro = ({
           <div ref={closeRef}>
             <div
               onClick={() => {
-                if (!searchFocused) {
+                if (!isSearchActive) {
                   open();
                 }
               }}
@@ -88,7 +92,7 @@ export const IntegrationsIntro = ({
               <Icon size={24}>
                 <FilterList />
               </Icon>
-              {!searchFocused && (
+              {!isSearchActive && (
                 <>
                   <span className={styles.text}>
                     {category === null ? 'All integrations' : category}
@@ -150,13 +154,13 @@ export const IntegrationsIntro = ({
             className={clsnm(
               styles.search,
               styles.box,
-              searchFocused && styles.active,
+              isSearchActive && styles.active,
             )}
           >
             <Icon>
               <Search />
             </Icon>
-            {searchFocused && (
+            {isSearchActive && (
               <>
                 <input
                   placeholder="Search"
