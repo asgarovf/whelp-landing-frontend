@@ -15,7 +15,7 @@ export const Features = ({ items }: Props) => {
   return (
     <div className={styles.wrapper}>
       {items.map((item, index) => (
-        <FeatureItemRenderer item={item} index={index} />
+        <FeatureItemRenderer key={index} item={item} index={index} />
       ))}
     </div>
   );

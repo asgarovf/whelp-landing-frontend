@@ -62,3 +62,4 @@ export { BotFlow } from './chatbot/BotFlow/BotFlow';
 export { BotCondition } from './chatbot/BotCondition/BotCondition';
 export { BotChannels } from './chatbot/BotChannels/BotChannels';
 export { IntegrationsIntro } from './IntegrationsIntro/IntegrationsIntro';
+export { IntegrationItems } from './IntegrationItems/IntegrationItems';
