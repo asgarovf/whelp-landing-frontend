@@ -1,4 +1,10 @@
-import { DocumentHead, Footer, IntegrationItems, Navbar } from 'components';
+import {
+  DocumentHead,
+  FAQ,
+  Footer,
+  IntegrationItems,
+  Navbar,
+} from 'components';
 import { IntegrationsIntro } from 'components';
 import { useMemo, useState } from 'react';
 import { Container, Layout } from 'ui';
@@ -16,14 +22,14 @@ export default function Integrations() {
     const _items: IntegrationItem[] = [];
 
     for (const item of IntegrationsData) {
-      if (search.trim() === '' && category != null) {
+      if (search.trim() !== '' && category != null) {
         if (
           item.name.toUpperCase().includes(search.toUpperCase()) &&
           item.category === category
         ) {
           _items.push(item);
         }
-      } else if (search.trim() === '') {
+      } else if (search.trim() !== '') {
         if (item.name.toUpperCase().includes(search.toUpperCase())) {
           _items.push(item);
         }
@@ -48,9 +54,11 @@ export default function Integrations() {
           <IntegrationsIntro
             category={category}
             search={search}
+            setCategory={setCategory}
             setSearch={setSearch}
           />
-          <IntegrationItems items={items} />
+          <IntegrationItems search={search} items={items} />
+          <FAQ />
         </Container>
         <Footer />
       </Layout>

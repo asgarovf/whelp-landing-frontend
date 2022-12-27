@@ -7,6 +7,7 @@ import Calendar from './calendar.svg';
 import ChartBar from './chart-bar.svg';
 import ChatCircleText from './chat-circle-text.svg';
 import Chats from './chats.svg';
+import CheckCircle from './check-circle.svg';
 import ChevronDown from './chevron-down.svg';
 import ChevronUp from './chevron-up.svg';
 import Clipboard from './clipboard.svg';
@@ -46,6 +47,7 @@ export {
   ChevronDown,
   ChevronUp,
   ChartBar,
+  CheckCircle,
   Clipboard,
   ChatCircleText,
   Search,
