@@ -40,7 +40,9 @@ export const PricingComponent = () => {
               <span className={styles.type}>{item.type}</span>
               <span className={styles.itemSubtext}>{item.subtext}</span>
               <div className={styles.itemPrice}>
-                <span className={styles.price}>{item.priceMonth}</span>
+                <span className={styles.price}>
+                  {tab === 0 ? item.priceMonth : item.priceYear}
+                </span>
                 {item.priceMonth !== 'Free' && (
                   <span className={styles.monthOrYear}>
                     {tab === 0 ? 'user / month' : 'user / month'}
@@ -110,6 +112,7 @@ const ITEMS = [
     type: 'Basic',
     subtext: 'Works perfect for small teams.',
     priceMonth: 'Free',
+    priceYear: 'Free',
     buttonType: 'transparent',
     buttonText: 'Get started',
     save: null,
@@ -119,6 +122,7 @@ const ITEMS = [
     type: 'Standard',
     subtext: 'Great for small and medium teams.',
     priceMonth: '$29',
+    priceYear: '$23',
     buttonType: 'black',
     buttonText: 'Try for free',
     save: 'Save 20%',
@@ -139,6 +143,7 @@ const ITEMS = [
     type: 'Premium',
     subtext: 'Great for large teams.',
     priceMonth: '$199',
+    priceYear: '$159',
     buttonType: 'black',
     buttonText: 'Try for free',
     save: 'Save 20%',
