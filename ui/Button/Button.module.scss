@@ -38,6 +38,22 @@
     }
   }
 
+  &.white {
+    background: var(--white-button-bg);
+    transition: 0.1s linear;
+    border: 2px solid var(--white-button-border);
+    color: var(--white-button-color);
+
+    &:hover {
+      background: var(--white-button-bg-hover);
+      transition: 0.1s linear;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px var(--wh-blue-10);
+    }
+  }
+
   &.flat {
     background: var(--flat-button-bg);
     transition: 0.1s linear;
@@ -70,4 +86,9 @@
 .text {
   font-size: 16px;
   white-space: nowrap;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }

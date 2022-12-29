@@ -42,7 +42,7 @@ export const useDropdown = ({
     floating,
     isOpen,
     open,
-    popperStyles,
+    popperStyles: { ...popperStyles, zIndex: 1 },
     reference,
     toggle,
   };

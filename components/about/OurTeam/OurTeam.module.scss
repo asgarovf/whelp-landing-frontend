@@ -1,0 +1,63 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  background-color: var(--wh-blue-5);
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 120px;
+
+  @media (max-width: $bp-sm) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  max-width: 70%;
+  text-align: center;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+    font-size: 32px !important;
+  }
+}
+
+.subtext {
+  max-width: 50%;
+  text-align: center;
+
+  @media (max-width: $bp-md) {
+    max-width: 75%;
+  }
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+  }
+}
+
+.imageWrapper {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: $bp-sm) {
+    width: 90%;
+  }
+
+  & .image {
+    width: 100%;
+  }
+}

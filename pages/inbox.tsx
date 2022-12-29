@@ -19,7 +19,7 @@ import {
   Voice,
 } from 'components';
 import { Container, Layout } from 'ui';
-import { homeData, inboxFeatureData } from 'utils/data';
+import { inboxFeatureData } from 'utils/data';
 
 export default function Home() {
   return (

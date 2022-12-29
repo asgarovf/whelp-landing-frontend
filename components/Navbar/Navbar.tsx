@@ -4,6 +4,7 @@ import Tip from 'assets/images/tip.svg';
 import { Cross as Hamburger } from 'hamburger-react';
 import { useBoolean, useOnClickOutside } from 'hooks';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
   ComponentPropsWithoutRef,
   ReactNode,
@@ -39,11 +40,11 @@ export const ButtonDropdownItems = [
     items: productItems,
     name: 'Product',
   },
-  {
-    key: MainMenuItem.SOLUTIONS,
-    items: solutionItems,
-    name: 'Solutions',
-  },
+  // {
+  //   key: MainMenuItem.SOLUTIONS,
+  //   items: solutionItems,
+  //   name: 'Solutions',
+  // },
   {
     key: MainMenuItem.RESOURCES,
     items: resourcesItems,
@@ -53,6 +54,7 @@ export const ButtonDropdownItems = [
     key: MainMenuItem.PRICING,
     items: undefined,
     name: 'Pricing',
+    link: '/pricing',
   },
   {
     key: MainMenuItem.COMPANY,
@@ -125,6 +127,7 @@ export const Navbar = () => {
               <div className={styles.links}>
                 {ButtonDropdownItems.map((item) => (
                   <ButtonDropdown
+                    link={item.link}
                     key={item.key}
                     dropdownProps={{
                       onMouseEnter: (e) => {
@@ -142,7 +145,11 @@ export const Navbar = () => {
             </div>
 
             <div className={styles.buttons}>
-              <Button href="hello" height="48px" color="flat">
+              <Button
+                href="https://web.getwhelp.com/"
+                height="48px"
+                color="flat"
+              >
                 Sign In
               </Button>
               <Button height="48px" style={{ marginLeft: '8px' }} color="black">
@@ -171,15 +178,26 @@ const ButtonDropdown = ({
   children,
   active,
   dropdownProps,
+  link,
 }: {
   dropdownItems?: DropdownItem[];
   children: ReactNode;
   active: boolean;
   dropdownProps?: ComponentPropsWithoutRef<'div'>;
+  link?: string;
 }) => {
+  const router = useRouter();
+
   return (
     <div {...dropdownProps} className={styles.dropdownWrapper}>
-      <div className={styles.dropdown}>
+      <div
+        onClick={() => {
+          if (link != null) {
+            router.push(link);
+          }
+        }}
+        className={styles.dropdown}
+      >
         <Text
           className={clsnm(
             styles.text,
@@ -198,7 +216,7 @@ const ButtonDropdown = ({
             <Tip />
           </div>
           {dropdownItems.map((item) => (
-            <Link key={item.name} href={item.link}>
+            <Link key={item.name} href={item.link} target={item.target}>
               <div className={styles.link}>
                 <Icon>{item.icon}</Icon>
                 <Text className={styles.linkText}>{item.name}</Text>

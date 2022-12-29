@@ -9,6 +9,7 @@ interface Props extends ComponentPropsWithoutRef<'h1'> {
   forwardedRef?: RefObject<HTMLHeadingElement>;
   as: HeaderTypes;
   inheritStyles?: HeaderTypes | 'hero';
+  poppins?: boolean;
 }
 
 export const Header = ({
@@ -17,6 +18,7 @@ export const Header = ({
   inheritStyles = 'h1',
   className,
   children,
+  poppins,
   ...props
 }: Props) => {
   const MainComponent = as;
@@ -27,7 +29,7 @@ export const Header = ({
         styles.header,
         styles[inheritStyles],
         className,
-        'cooper',
+        !poppins && 'cooper',
       )}
       ref={forwardedRef}
       {...props}

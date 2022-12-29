@@ -1,0 +1,36 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 75%;
+  padding: 120px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  @media (max-width: $bp-sm) {
+    width: 100%;
+    padding: 60px 0px;
+  }
+}
+
+.text {
+  margin-top: 16px !important;
+  max-width: 80%;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+  }
+}
+
+.button {
+  margin-top: 32px;
+  width: max-content;
+
+  @media (max-width: $bp-sm) {
+    width: 100%;
+  }
+}

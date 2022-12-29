@@ -1,22 +1,27 @@
-import { Footer, Navbar } from 'components';
-import { Text } from 'ui';
+import { DocumentHead, Footer, Navbar } from 'components';
+import styles from 'styles/pages/404.module.scss';
+import { Button, Container, Header, Text } from 'ui';
 
 const FourOFour = () => {
   return (
     <>
+      <DocumentHead title="Page not found" />
       <Navbar />
-      <Text
-        style={{
-          height: '45vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: '36px',
-        }}
-      >
-        404 | Page Not Found
-      </Text>
-      <Footer />
+      <Container>
+        <div className={styles.wrapper}>
+          <Header inheritStyles="hero" as="h1">
+            Page you’re looking for is not available
+          </Header>
+          <Text className={styles.text} subtext>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et elit
+            eu mauris lobortis fringilla a eu lectus.
+          </Text>
+          <Button href="/" color="black" className={styles.button}>
+            Go to homepage
+          </Button>
+        </div>
+      </Container>
+      <Footer include={false} />
     </>
   );
 };

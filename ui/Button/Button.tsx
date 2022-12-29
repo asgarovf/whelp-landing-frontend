@@ -1,5 +1,6 @@
 import { ComponentPropsWithoutRef, ReactNode, RefObject } from 'react';
 import { DynamicBorderRadiusProps } from 'types';
+import { Spinner } from 'ui/Spinner/Spinner';
 import { clsnm } from 'utils/clsnm';
 
 import styles from './Button.module.scss';
@@ -13,7 +14,7 @@ interface AnchorSpecificProps extends ComponentPropsWithoutRef<'a'> {
 }
 
 type Props = {
-  color: 'black' | 'transparent' | 'flat';
+  color: 'black' | 'transparent' | 'flat' | 'white';
   leftEl?: ReactNode;
   rigthEl?: ReactNode;
   height?: string;
@@ -21,6 +22,8 @@ type Props = {
   paddingX?: string;
   paddingY?: string;
   href?: string;
+  disabled?: boolean;
+  loading?: boolean;
 } & DynamicBorderRadiusProps &
   (ButtonSpecificProps | AnchorSpecificProps);
 
@@ -41,6 +44,8 @@ export const Button = ({
   bottomRightRadius = '60px',
   height,
   width,
+  disabled,
+  loading,
   ...props
 }: Props) => {
   const Main: any = href != null ? 'a' : 'button';
@@ -61,12 +66,22 @@ export const Button = ({
         borderBottomRightRadius: bottomRightRadius,
         ...style,
       }}
-      className={clsnm(styles.button, className, styles[color])}
+      className={clsnm(
+        styles.button,
+        className,
+        styles[color],
+        disabled && styles.disabled,
+      )}
+      href={href}
       {...props}
     >
       {leftEl != null && <div className={styles.left}>{leftEl}</div>}
       <span className={clsnm(styles.text, 'poppins')}>{children}</span>
-      {rigthEl != null && <div className={styles.right}>{rigthEl}</div>}
+      {(rigthEl != null || loading) && (
+        <div className={styles.right}>
+          {loading ? <Spinner size={18} buttonColor={color} /> : rigthEl}
+        </div>
+      )}
     </Main>
   );
 };

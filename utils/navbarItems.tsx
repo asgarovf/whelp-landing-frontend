@@ -26,6 +26,7 @@ export type DropdownItem = {
   name: string;
   link: string;
   icon: ReactNode;
+  target?: string;
 };
 
 export const productItems: DropdownItem[] = [
@@ -92,50 +93,51 @@ export const solutionItems: DropdownItem[] = [
 export const resourcesItems: DropdownItem[] = [
   {
     name: 'Blog',
-    link: '#',
+    link: 'https://whelp.co/blog/',
     icon: <Edit />,
+    target: '_blank',
   },
-  {
-    name: 'Help center',
-    link: '#',
-    icon: <Question />,
-  },
-  {
-    name: `What's new`,
-    link: '#',
-    icon: <Bolt />,
-  },
-  {
-    name: 'Watch demo',
-    link: '#',
-    icon: <Play />,
-  },
-  {
-    name: 'Status',
-    link: '#',
-    icon: <HeartRate />,
-  },
+  // {
+  //   name: 'Help center',
+  //   link: '#',
+  //   icon: <Question />,
+  // },
+  // {
+  //   name: `What's new`,
+  //   link: '#',
+  //   icon: <Bolt />,
+  // },
+  // {
+  //   name: 'Watch demo',
+  //   link: '#',
+  //   icon: <Play />,
+  // },
+  // {
+  //   name: 'Status',
+  //   link: '#',
+  //   icon: <HeartRate />,
+  // },
 ];
 
 export const companyItems: DropdownItem[] = [
   {
     name: 'About',
-    link: '#',
+    link: '/about',
     icon: <Info />,
   },
   {
     name: 'Contact',
-    link: '#',
+    link: '/contact',
     icon: <Mail />,
   },
   {
     name: 'Privacy policy',
-    link: '#',
+    link: '/privacy-policy',
     icon: <Shield />,
   },
   {
     name: 'Terms of service',
-    link: '#',
+    link: '/terms-of-service',
     icon: <FileText />,
   },
 ];

@@ -36,10 +36,6 @@
   text-align: center;
 }
 
-.image {
-  width: 100%;
-}
-
 .imageWrapper {
   margin-top: 48px;
   display: grid;
@@ -48,4 +44,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
+
+  & .image {
+    width: 100%;
+  }
 }

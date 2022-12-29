@@ -6,3 +6,7 @@ export { Button } from './Button/Button';
 export { Header } from './Header/Header';
 export { Text } from './Text/Text';
 export { Input } from './Input/Input';
+export { TextArea } from './TextArea/TextArea';
+export { Checkbox } from './Checkbox/Checkbox';
+export { Select } from './Select/Select';
+export { Spinner } from './Spinner/Spinner';

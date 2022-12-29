@@ -1,0 +1,51 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  background: var(--wh-white);
+  border: 2px solid var(--wh-black);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: block;
+
+  @media (max-width: $bp-sm) {
+    padding: 24px;
+  }
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputWrapper {
+  border: 1px solid rgba(0, 0, 0, 0.16) !important;
+  height: 48px;
+  border-radius: 8px !important;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.checkbox {
+  margin-top: 28px;
+}
+
+.button {
+  width: max-content;
+  margin-top: 28px;
+
+  @media (max-width: $bp-sm) {
+    width: 100%;
+  }
+}

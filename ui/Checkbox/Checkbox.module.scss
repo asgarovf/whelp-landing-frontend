@@ -1,0 +1,40 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  outline: none;
+  border: none;
+  width: max-content;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px;
+  background-color: transparent;
+
+  @media (max-width: $bp-sm) {
+    width: 100%;
+  }
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+
+  & svg {
+    color: var(--wh-white);
+    stroke: var(--wh-neutral-40);
+  }
+
+  &.checked {
+    & svg {
+      color: var(--wh-black);
+      stroke: transparent;
+    }
+  }
+}
+
+.label {
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 8px;
+  text-align: left;
+}

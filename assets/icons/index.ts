@@ -8,6 +8,9 @@ import ChartBar from './chart-bar.svg';
 import ChatCircleText from './chat-circle-text.svg';
 import Chats from './chats.svg';
 import CheckCircle from './check-circle.svg';
+import Check from './check.svg';
+import CheckboxChecked from './checkbox-checked.svg';
+import Checkbox from './checkbox.svg';
 import ChevronDown from './chevron-down.svg';
 import ChevronUp from './chevron-up.svg';
 import Clipboard from './clipboard.svg';
@@ -24,12 +27,15 @@ import Instagram from './instagram.svg';
 import Invoice from './invoice.svg';
 import Linkedin from './linkedin.svg';
 import Mail from './mail.svg';
+import Map from './map.svg';
 import MinusCircle from './minus-circle.svg';
 import Navigation from './navigation.svg';
+import Phone from './phone.svg';
 import Play from './play.svg';
 import PlusCircle from './plus-circle.svg';
 import Question from './question.svg';
 import Rocket from './rocket.svg';
+import Route from './route.svg';
 import Search from './search.svg';
 import Shield from './shield.svg';
 import ShoppingCart from './shopping-cart.svg';
@@ -44,7 +50,10 @@ export {
   Building,
   Calendar,
   Close,
+  Check,
   ChevronDown,
+  Checkbox,
+  CheckboxChecked,
   ChevronUp,
   ChartBar,
   CheckCircle,
@@ -65,15 +74,18 @@ export {
   ShoppingCart,
   Shield,
   Mail,
+  Map,
   Users,
   Instagram,
   Invoice,
   Folder,
   Twitter,
   PlusCircle,
+  Phone,
   MinusCircle,
   Linkedin,
   Tag,
   Chats,
   Navigation,
+  Route,
 };
