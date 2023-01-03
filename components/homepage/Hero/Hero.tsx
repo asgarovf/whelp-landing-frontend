@@ -9,6 +9,7 @@ import { useDefaultGap } from 'hooks';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button, Content, Header, Input, Text } from 'ui';
+import { clsnm } from 'utils/clsnm';
 import { getSignupUrl } from 'utils/getSignupUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
@@ -32,10 +33,14 @@ export const Hero = () => {
 };
 
 const HeroRight = () => {
+  const [mainImageLoaded, setMainImageLoaded] = useState(false);
   return (
     <div className={styles.imageWrapper}>
       <div className={styles.inner}>
         <Image
+          onLoad={() => {
+            setMainImageLoaded(true);
+          }}
           loading="lazy"
           className={styles.imageBg}
           src={HeroRightBackground}
@@ -43,37 +48,37 @@ const HeroRight = () => {
         />
         <Image
           loading="lazy"
-          className={styles.model}
+          className={clsnm(styles.model, !mainImageLoaded && 'd-none')}
           src={HeroRightModelfrom}
           alt="Hero model"
         />
         <Image
           loading="lazy"
-          className={styles.topRight}
+          className={clsnm(styles.topRight, !mainImageLoaded && 'd-none')}
           src={HeroRightTopRight}
           alt="Hero top right"
         />
         <Image
           loading="lazy"
-          className={styles.leftCenter}
+          className={clsnm(styles.leftCenter, !mainImageLoaded && 'd-none')}
           src={HeroRightLeftCenter}
           alt="Hero left center"
         />
         <Image
           loading="lazy"
-          className={styles.bottomRight}
+          className={clsnm(styles.bottomRight, !mainImageLoaded && 'd-none')}
           src={HeroRightBottomRight}
           alt="Hero bottom right"
         />
         <Image
           loading="lazy"
-          className={styles.lineBottom}
+          className={clsnm(styles.lineBottom, !mainImageLoaded && 'd-none')}
           src={HeroRightLineBottom}
           alt="Hero line bottom"
         />
         <Image
           loading="lazy"
-          className={styles.lineTop}
+          className={clsnm(styles.lineTop, !mainImageLoaded && 'd-none')}
           src={HeroRightLineTop}
           alt="Hero line top"
         />
