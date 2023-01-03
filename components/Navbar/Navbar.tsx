@@ -14,6 +14,8 @@ import {
 } from 'react';
 import { Button, Container, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
+import { getSigninUrl } from 'utils/getSigninUrl';
+import { getSignupUrl } from 'utils/getSignupUrl';
 import {
   DropdownItem,
   companyItems,
@@ -145,14 +147,15 @@ export const Navbar = () => {
             </div>
 
             <div className={styles.buttons}>
-              <Button
-                href="https://web.getwhelp.com/"
-                height="48px"
-                color="flat"
-              >
+              <Button href={getSigninUrl()} height="48px" color="flat">
                 Sign In
               </Button>
-              <Button height="48px" style={{ marginLeft: '8px' }} color="black">
+              <Button
+                href={getSignupUrl()}
+                height="48px"
+                style={{ marginLeft: '8px' }}
+                color="black"
+              >
                 Get Started
               </Button>
             </div>

@@ -31,12 +31,15 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Automate your campaign
+        Customize Your Communication Efforts
       </Header>
       <Text className={styles.subtext} subtext>
-        Send bulk messages via WhatsApp, Telegram, Email, Facebook Messenger.
+        Whelp allows you to easily customize and automate your communication
+        campaigns, sending bulk messages via WhatsApp, Telegram, Email, and
+        Facebook Messenger.
       </Text>
       <Button
+        href="/outbound"
         className={styles.button}
         rigthEl={
           <Icon>

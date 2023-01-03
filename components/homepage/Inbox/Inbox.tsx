@@ -31,13 +31,15 @@ const InboxRight = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Manage all your conversations in one place
+        Consolidate Your Customer Conversations in One Inbox
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        A single inbox allows you to combine all of your phone, email, chat, and
+        messaging app conversations in one location, improving your efficiency
+        and customer satisfaction.
       </Text>
       <Button
+        href="/inbox"
         className={styles.button}
         rigthEl={
           <Icon>

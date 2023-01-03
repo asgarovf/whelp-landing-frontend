@@ -30,13 +30,15 @@ const CRMLeft = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Streamline Your Workflow with a CRM Solution
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Our platform simplifies the process of managing and responding to
+        customer inquiries and concerns by consolidating all of their
+        interactions and data in one place.
       </Text>
       <Button
+        href="/crm"
         className={styles.button}
         rigthEl={
           <Icon>

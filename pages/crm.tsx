@@ -16,7 +16,7 @@ import {
   UserDetailsCRM,
 } from 'components';
 import { Container, Layout } from 'ui';
-import { inboxFeatureData } from 'utils/data';
+import { crmFeatureData, inboxFeatureData } from 'utils/data';
 
 export default function Home() {
   return (
@@ -38,7 +38,7 @@ export default function Home() {
           <MergeContacts />
           <ExportData />
           <AddTag />
-          <Features items={inboxFeatureData} />
+          <Features items={crmFeatureData} />
         </Container>
         <Footer />
       </Layout>

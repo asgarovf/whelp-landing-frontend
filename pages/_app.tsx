@@ -1,6 +1,7 @@
 import { useInitialTheme } from 'hooks';
 import type { AppProps } from 'next/app';
 import NextNProgress from 'nextjs-progressbar';
+import { GlobalContextProvider } from 'store/global';
 import 'styles/globals.scss';
 import { getFonts } from 'utils/getFonts';
 
@@ -10,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   useInitialTheme();
 
   return (
-    <>
+    <GlobalContextProvider>
       <style jsx global>{`
         html,
         span,
@@ -31,6 +32,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </style>
       <NextNProgress color="black" />
       <Component {...pageProps} />{' '}
-    </>
+    </GlobalContextProvider>
   );
 }

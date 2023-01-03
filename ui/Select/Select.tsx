@@ -1,5 +1,5 @@
 import useResizeObserver from '@react-hook/resize-observer';
-import { ChevronDown } from 'assets/icons';
+import { CheckCircle, ChevronDown } from 'assets/icons';
 import { useDropdown } from 'hooks';
 import { ComponentPropsWithoutRef, useEffect, useRef } from 'react';
 import { mergeRefs } from 'react-merge-refs';
@@ -18,20 +18,12 @@ type Props = {
 };
 
 export const Select = ({ inputProps, value, onChange, options }: Props) => {
-  const {
-    close,
-    closeRef,
-    open,
-    isOpen,
-    toggle,
-    reference,
-    floating,
-    popperStyles,
-  } = useDropdown({
-    strategy: 'absolute',
-    placement: 'bottom-start',
-    topDistance: 12,
-  });
+  const { close, closeRef, isOpen, toggle, reference, floating, popperStyles } =
+    useDropdown({
+      strategy: 'absolute',
+      placement: 'bottom-start',
+      topDistance: 12,
+    });
 
   const inputRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -87,7 +79,12 @@ export const Select = ({ inputProps, value, onChange, options }: Props) => {
                 item.key === value && styles.selected,
               )}
             >
-              {item.label}
+              <span>{item.label}</span>
+              {value === item.key && (
+                <Icon className={styles.checkIcon}>
+                  <CheckCircle />
+                </Icon>
+              )}
             </div>
           ))}
         </div>

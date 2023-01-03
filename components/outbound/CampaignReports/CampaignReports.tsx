@@ -29,11 +29,11 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Keep track of your campaigns with detailed reports
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Monitor the performance of your campaigns with detailed reports,
+        providing valuable insights for future planning.
       </Text>
     </Content>
   );

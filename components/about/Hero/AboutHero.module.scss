@@ -8,6 +8,11 @@
   justify-content: center;
   padding-top: 120px;
   padding-bottom: 120px;
+  min-height: calc(100vh - var(--navbar-height));
+
+  @media (min-height: 1000px) {
+    min-height: 800px;
+  }
 
   @media (max-width: $bp-sm) {
     padding-top: 60px;

@@ -3,6 +3,7 @@ import HeroRightBackground from 'assets/images/reporting/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';
+import { getSigninUrl } from 'utils/getSigninUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
@@ -17,6 +18,7 @@ export const ReportingHero = () => {
 
   return (
     <DualGrid
+      maxHeight
       gap={gap}
       leftClassName={styles.left}
       rightClassName={styles.right}
@@ -45,13 +47,16 @@ const HeroLeft = () => {
   return (
     <Content className={styles.content}>
       <Header inheritStyles="hero" as="h1">
-        Track all your data with advanced reporting system
+        Track all your data with the advanced reporting system
       </Header>
       <Text className={styles.subtext} subtext>
-        Analyze the performance of the company in any time range.
+        Keep track of all your customer interactions and business performance
+        with our advanced reporting system, equipped with a range of tools to
+        help you analyze and optimize your operations.
       </Text>
       <div className={styles.formWrapper}>
         <Button
+          href={getSigninUrl()}
           rigthEl={<ArrowRight />}
           className={styles.button}
           color="black"

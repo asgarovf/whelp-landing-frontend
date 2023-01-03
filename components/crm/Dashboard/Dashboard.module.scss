@@ -29,11 +29,20 @@
 .text {
   text-align: center;
   margin-top: 20px;
-  max-width: 85%;
+  max-width: 80%;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+  }
 }
 
 .header {
   text-align: center;
+  max-width: 85%;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+  }
 }
 
 .imageWrapper {

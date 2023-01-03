@@ -30,11 +30,12 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        One location for all your customer data
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        The platform allows you to collect and store all of your customer data
+        in one location, making it easy to access and analyze it to optimize
+        your business operations.
       </Text>
     </Content>
   );

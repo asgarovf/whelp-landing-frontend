@@ -13,7 +13,7 @@ import {
   ReportsOverview,
 } from 'components';
 import { Container, Layout } from 'ui';
-import { inboxFeatureData } from 'utils/data';
+import { inboxFeatureData, reportingFeatureData } from 'utils/data';
 
 export default function Home() {
   return (
@@ -35,7 +35,7 @@ export default function Home() {
           <ChannelReports />
           <ReportsOverview />
           <RangeFilter />
-          <Features items={inboxFeatureData} />
+          <Features items={reportingFeatureData} />
           <FAQ />
         </Container>
         <Footer />

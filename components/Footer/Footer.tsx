@@ -1,10 +1,12 @@
 import { Facebook, Instagram, Linkedin, Twitter } from 'assets/icons';
 import LogoSm from 'assets/images/logo-sm.svg';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ComponentPropsWithoutRef } from 'react';
 import { Button, Container, Header, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 import { footerData } from 'utils/data';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import styles from './Footer.module.scss';
 
@@ -13,6 +15,8 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
 }
 
 export const Footer = ({ include = true }: Props) => {
+  const router = useRouter();
+
   return (
     <>
       {include && (
@@ -22,16 +26,26 @@ export const Footer = ({ include = true }: Props) => {
               Get started now!
             </Header>
             <Text className={styles.topText} subtext>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et
-              elit eu mauris lobortis fringilla a eu lectus.
+              Sign up now to improve your customer support with our tools and
+              solutions.
             </Text>
             <div className={styles.buttons}>
-              <Button className={styles.button} color="black">
+              <Button
+                href={getSignupUrl()}
+                className={styles.button}
+                color="black"
+              >
                 Get started
               </Button>
-              <Button className={styles.button} color="transparent">
-                View pricing
-              </Button>
+              {router.route !== '/pricing' && (
+                <Button
+                  href="/pricing"
+                  className={styles.button}
+                  color="transparent"
+                >
+                  View pricing
+                </Button>
+              )}
             </div>
           </Container>
         </div>
@@ -67,22 +81,38 @@ export const Footer = ({ include = true }: Props) => {
         <Container className={styles.copyRightContent}>
           <Text subtext>Copyright © 2022, Whelp, Inc.</Text>
           <div className={styles.social}>
-            <a href="#">
+            <a
+              href="https://www.facebook.com/getwhelp/"
+              referrerPolicy="no-referrer"
+              target="_blank"
+            >
               <Icon size={24}>
                 <Facebook />
               </Icon>
             </a>
-            <a href="#">
+            <a
+              href="https://www.instagram.com/whelp.co/"
+              referrerPolicy="no-referrer"
+              target="_blank"
+            >
               <Icon size={24}>
                 <Instagram />
               </Icon>
             </a>
-            <a href="#">
+            <a
+              href="https://twitter.com/getwhelp"
+              referrerPolicy="no-referrer"
+              target="_blank"
+            >
               <Icon size={24}>
                 <Twitter />
               </Icon>
             </a>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/company/whelp"
+              referrerPolicy="no-referrer"
+              target="_blank"
+            >
               <Icon size={24}>
                 <Linkedin />
               </Icon>

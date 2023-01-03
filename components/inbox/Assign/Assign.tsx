@@ -30,11 +30,11 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Keep all your data in one place
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Collect and store all customer data in one location for easy access and
+        analysis to optimize your business operations.
       </Text>
     </Content>
   );

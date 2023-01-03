@@ -31,11 +31,11 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Manage all your conversations in one place
+        Chatbot performance reports
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        Get detailed reports on the performance and effectiveness of your
+        AI-based chatbot with our reporting system.
       </Text>
     </Content>
   );

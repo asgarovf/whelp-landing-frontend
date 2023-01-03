@@ -4,7 +4,9 @@ import Bolt from './bolt.svg';
 import Bot from './bot.svg';
 import Building from './building.svg';
 import Calendar from './calendar.svg';
+import Category from './category.svg';
 import ChartBar from './chart-bar.svg';
+import ChartPie from './chart-pie.svg';
 import ChatCircleText from './chat-circle-text.svg';
 import Chats from './chats.svg';
 import CheckCircle from './check-circle.svg';
@@ -13,13 +15,17 @@ import CheckboxChecked from './checkbox-checked.svg';
 import Checkbox from './checkbox.svg';
 import ChevronDown from './chevron-down.svg';
 import ChevronUp from './chevron-up.svg';
+import Chip from './chip.svg';
 import Clipboard from './clipboard.svg';
 import Close from './close.svg';
+import Download from './download.svg';
 import Edit from './edit.svg';
 import Facebook from './facebook.svg';
 import FileText from './file-text.svg';
+import FilterFunnel from './filter-funnel.svg';
 import FilterList from './filter-list.svg';
 import Folder from './folder.svg';
+import GridThreeHorizontal from './grid-three-horizontal.svg';
 import HeartRate from './heart-rate.svg';
 import Inbox from './inbox.svg';
 import Info from './info.svg';
@@ -37,20 +43,25 @@ import Question from './question.svg';
 import Rocket from './rocket.svg';
 import Route from './route.svg';
 import Search from './search.svg';
+import Settings from './settings.svg';
 import Shield from './shield.svg';
 import ShoppingCart from './shopping-cart.svg';
 import Tag from './tag.svg';
 import Twitter from './twitter.svg';
+import User from './user.svg';
 import Users from './users.svg';
 
 export {
   ArrowRight,
   AppStore,
+  Category,
   Bot,
   Building,
   Calendar,
   Close,
+  Chip,
   Check,
+  ChartPie,
   ChevronDown,
   Checkbox,
   CheckboxChecked,
@@ -59,22 +70,27 @@ export {
   CheckCircle,
   Clipboard,
   ChatCircleText,
+  Download,
+  GridThreeHorizontal,
   Search,
   Edit,
   Facebook,
   FilterList,
   Bolt,
   FileText,
+  FilterFunnel,
   HeartRate,
   Info,
   Inbox,
   Play,
   Question,
   Rocket,
+  Settings,
   ShoppingCart,
   Shield,
   Mail,
   Map,
+  User,
   Users,
   Instagram,
   Invoice,

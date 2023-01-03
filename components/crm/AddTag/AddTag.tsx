@@ -30,11 +30,11 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Categorize your customer contacts with tags
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Use tagging feature to categorize your customer contacts, making it
+        easier to find and manage them.
       </Text>
     </Content>
   );

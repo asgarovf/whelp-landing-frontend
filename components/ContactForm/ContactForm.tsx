@@ -17,7 +17,6 @@ import styles from './ContactForm.module.scss';
 export const ContactForm = () => {
   const parentRef = useRef<HTMLDivElement>(null);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
-  const checked = useBoolean();
 
   const [state, setState] = useState({
     name: '',
@@ -31,20 +30,16 @@ export const ContactForm = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  const payload = useMemo(() => {
-    return { ...state, teamSize: teamSize };
-  }, [teamSize, state]);
-
   const isDisabled = useMemo(() => {
     const c1 = isEmpty(state.name);
     const c2 = isEmpty(state.email);
     const c3 = isEmpty(state.company);
     const c4 = isEmpty(teamSize?.value ?? '');
-    const c5 = checked.value === false;
+    // const c5 = checked.value === false;
     const c6 = !isEmail(state.email);
 
-    return c1 || c2 || c3 || c4 || c5 || c6;
-  }, [state, teamSize, checked]);
+    return c1 || c2 || c3 || c4 || c6;
+  }, [state, teamSize]);
 
   return (
     <div ref={parentRef} className={styles.wrapper}>
@@ -95,12 +90,12 @@ export const ContactForm = () => {
           placeholder="Enter your message"
           forwardedRef={textAreaRef}
         />
-        <Checkbox
+        {/* <Checkbox
           className={styles.checkbox}
           label="I agree to Whelp’s rules and accept"
           checked={checked.value}
           onClick={checked.toggle}
-        />
+        /> */}
         <Button disabled={isDisabled} className={styles.button} color="black">
           Submit
         </Button>

@@ -30,11 +30,12 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Customize your data management
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        With this platform, you have control over your data management. You can
+        create your own tables and set your own rules for organizing and
+        tracking your customer data.
       </Text>
     </Content>
   );

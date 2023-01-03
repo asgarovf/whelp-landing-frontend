@@ -3,6 +3,7 @@ import HeroRightBackground from 'assets/images/crm/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
@@ -17,6 +18,7 @@ export const CRMHero = () => {
 
   return (
     <DualGrid
+      maxHeight
       gap={gap}
       leftClassName={styles.left}
       rightClassName={styles.right}
@@ -45,14 +47,16 @@ const HeroLeft = () => {
   return (
     <Content className={styles.content}>
       <Header inheritStyles="hero" as="h1">
-        CRM that you’ve been looking for
+        The CRM solution you've been looking for
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Streamline your customer relationship management with our feature-rich
+        platform that offers tools and solutions to improve your customer
+        support.
       </Text>
       <div className={styles.formWrapper}>
         <Button
+          href={getSignupUrl()}
           rigthEl={<ArrowRight />}
           className={styles.button}
           color="black"

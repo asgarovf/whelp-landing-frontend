@@ -52,6 +52,7 @@ const Left = () => {
         already love.
       </Text>
       <Button
+        href="/integrations"
         className={styles.button}
         rigthEl={
           <Icon>

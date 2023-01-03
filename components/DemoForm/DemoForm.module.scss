@@ -1,0 +1,122 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  &.maxHeight {
+    min-height: calc(100vh - var(--navbar-height));
+    @media (min-height: 1000px) {
+      min-height: 800px;
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    padding-top: 40px;
+    padding-bottom: 60x;
+  }
+}
+
+.formWrapper {
+  border: 2px solid var(--wh-black);
+  border-radius: 20px;
+  display: flex;
+}
+
+.image {
+  border-right: 2px solid var(--wh-black);
+  flex-shrink: 0;
+  display: flex;
+  width: 40%;
+  height: auto;
+
+  @media (max-width: $bp-md) {
+    display: none;
+  }
+
+  & img {
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.form {
+  padding: 60px 80px;
+
+  @media (max-width: $bp-sm) {
+    padding: 28px 24px;
+  }
+}
+
+.header {
+  text-align: left !important;
+  font-weight: 400 !important;
+}
+
+.formGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @media (max-width: $bp-sm) {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+
+.submit {
+  margin-top: 28px;
+}
+
+.calendlyWrapper {
+  height: auto;
+
+  & iframe {
+    min-height: 700px;
+    transform: translateY(-40px);
+  }
+}
+
+.successWrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--wh-black);
+}
+
+.circle {
+  background-color: var(--wh-green-5);
+  display: flex;
+  flex-shrink: 0;
+  width: 64px;
+  height: 56px;
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.head {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.button {
+  margin-top: 32px;
+}

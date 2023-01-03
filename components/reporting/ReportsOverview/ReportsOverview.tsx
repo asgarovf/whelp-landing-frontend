@@ -30,11 +30,11 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Manage all your conversations in one place
+        Reports overview
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        Our reporting system provides an overview of all your reports, making it
+        easy to access and compare data from different sources.
       </Text>
     </Content>
   );

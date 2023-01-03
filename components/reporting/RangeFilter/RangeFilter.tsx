@@ -29,11 +29,11 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Custom range filter
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Set custom date ranges to filter your data and focus on specific time
+        periods with our reporting system's custom range filter.
       </Text>
     </Content>
   );

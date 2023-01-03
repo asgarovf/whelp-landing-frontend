@@ -30,11 +30,11 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Manage all your conversations in one place
+        Choose your desired channel for your campaigns
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        Reach your audience through their preferred channels, including SMS,
+        Voice, WhatsApp, WeChat, Messenger, Email, and Live Chat.
       </Text>
     </Content>
   );

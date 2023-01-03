@@ -46,12 +46,14 @@ const Left = () => {
   return (
     <Content>
       <Header as="h2">
-        Track all your data with advanced reporting system
+        Analyze Your Company's Performance with Advanced Reporting
       </Header>
       <Text className={styles.subtext} subtext>
-        Analyze the performance of the company in any time range.
+        Advanced reporting provides insights into your company's performance
+        over any time range, helping you optimize your business operations.
       </Text>
       <Button
+        href="/reporting"
         className={styles.button}
         rigthEl={
           <Icon>

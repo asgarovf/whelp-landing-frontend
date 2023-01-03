@@ -14,7 +14,7 @@ import {
   TargetAudience,
 } from 'components';
 import { Container, Layout } from 'ui';
-import { inboxFeatureData } from 'utils/data';
+import { inboxFeatureData, outboundFeatureData } from 'utils/data';
 
 export default function Home() {
   return (
@@ -37,7 +37,7 @@ export default function Home() {
           <ScheduleOutbound />
           <Personalization />
           <SelectChannel />
-          <Features items={inboxFeatureData} />
+          <Features items={outboundFeatureData} />
           <FAQ />
         </Container>
         <Footer />

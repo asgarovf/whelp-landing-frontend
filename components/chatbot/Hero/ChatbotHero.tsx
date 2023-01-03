@@ -3,6 +3,7 @@ import HeroRightBackground from 'assets/images/chatbot/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
@@ -12,11 +13,13 @@ export const ChatbotHero = () => {
   const gap = useGap({
     small: 40,
     medium: 40,
-    large: 90,
+    large: 24,
   });
 
   return (
     <DualGrid
+      paddingY={80}
+      maxHeight
       gap={gap}
       leftClassName={styles.left}
       rightClassName={styles.right}
@@ -45,13 +48,15 @@ const HeroLeft = () => {
   return (
     <Content className={styles.content}>
       <Header inheritStyles="hero" as="h1">
-        Automate your campaign
+        Design unique chatbots with drag and drop builder
       </Header>
       <Text className={styles.subtext} subtext>
-        Send bulk messages via WhatsApp, Telegram, Email, Facebook Messenger.
+        Create personalized chatbots quickly and easily with our intuitive
+        drag-and-drop builder.
       </Text>
       <div className={styles.formWrapper}>
         <Button
+          href={getSignupUrl()}
           rigthEl={<ArrowRight />}
           className={styles.button}
           color="black"

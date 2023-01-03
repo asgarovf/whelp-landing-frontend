@@ -2,6 +2,7 @@ import { Check } from 'assets/icons';
 import { useState } from 'react';
 import { Button, Container, Header, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import styles from './PricingComponent.module.scss';
 
@@ -52,7 +53,11 @@ export const PricingComponent = () => {
                   <div className={styles.save}>{item.save}</div>
                 )}
               </div>
-              <Button className={styles.button} color={item.buttonType as any}>
+              <Button
+                href={getSignupUrl()}
+                className={styles.button}
+                color={item.buttonType as any}
+              >
                 {item.buttonText}
               </Button>
               <div className={styles.itemOptions}>
@@ -82,10 +87,16 @@ export const PricingComponent = () => {
               For Startups
             </Header>
             <Text className={styles.bottomItemText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et
-              elit eu mauris lobortis fringilla a eu lectus.
+              Our Startups pricing plan is designed for growing businesses with
+              limited resources. Get access to all the features you need to
+              connect with your customers and scale your business at an
+              affordable price.
             </Text>
-            <Button className={styles.bottomButton} color="black">
+            <Button
+              href="/request-demo"
+              className={styles.bottomButton}
+              color="black"
+            >
               Request demo
             </Button>
           </div>
@@ -94,10 +105,15 @@ export const PricingComponent = () => {
               Enterprise
             </Header>
             <Text className={styles.bottomItemText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et
-              elit eu mauris lobortis fringilla a eu lectus.
+              Tailored for large organizations with high volume communication
+              needs, our Enterprise plan offers advanced features and dedicated
+              support to meet the demands of your business
             </Text>
-            <Button className={styles.bottomButton} color="black">
+            <Button
+              href="/request-demo"
+              className={styles.bottomButton}
+              color="black"
+            >
               Request demo
             </Button>
           </div>

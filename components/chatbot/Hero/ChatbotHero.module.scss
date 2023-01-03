@@ -19,6 +19,7 @@
 
 .right {
   align-items: center;
+  justify-content: center;
 }
 
 .left {
@@ -36,6 +37,11 @@
 
 .button {
   margin-top: 32px;
+
+  width: max-content;
+  @media (max-width: $bp-sm) {
+    width: 100%;
+  }
 }
 
 .content {

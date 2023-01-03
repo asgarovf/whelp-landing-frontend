@@ -45,11 +45,14 @@ const Right = () => {
 const Left = () => {
   return (
     <Content>
-      <Header as="h2">Design unique chatbots with drag and drop</Header>
+      <Header as="h2"> Design Unique Chatbots with Drag and Drop</Header>
       <Text className={styles.subtext} subtext>
-        Provide your customers 24/7 & quick service.
+        The chatbot builder on this platform makes it easy for you to design and
+        deploy chatbots that can provide your customers with 24/7 service and
+        quick responses to their inquiries and concerns.
       </Text>
       <Button
+        href="/chatbot"
         className={styles.button}
         rigthEl={
           <Icon>

@@ -29,11 +29,12 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        First response time analysis
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Our reporting system includes tools to analyze and track your team's
+        First Response Time, helping you optimize your customer support and
+        improve your response times.
       </Text>
     </Content>
   );

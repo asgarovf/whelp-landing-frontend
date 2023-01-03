@@ -17,6 +17,7 @@ export const Hero = () => {
 
   return (
     <DualGrid
+      maxHeight
       gap={gap}
       leftClassName={styles.left}
       rightClassName={styles.right}
@@ -48,8 +49,8 @@ const HeroLeft = () => {
         Manage all your conversations in one place
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        Consolidate phone, email, chat, and messaging app conversations in one
+        location for easy management and response to customer inquiries.
       </Text>
       <div className={styles.formWrapper}>
         <Button

@@ -7,7 +7,9 @@ import HeroRightModelfrom from 'assets/images/homepage/landing/model.png';
 import HeroRightTopRight from 'assets/images/homepage/landing/top-right.png';
 import { useDefaultGap } from 'hooks';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Button, Content, Header, Input, Text } from 'ui';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
@@ -18,6 +20,7 @@ export const Hero = () => {
 
   return (
     <DualGrid
+      maxHeight
       gap={gap}
       paddingTop={40}
       leftClassName={styles.left}
@@ -80,17 +83,23 @@ const HeroRight = () => {
 };
 
 const HeroLeft = () => {
+  const [value, setValue] = useState('');
+
   return (
     <Content>
       <Header inheritStyles="hero" as="h1">
-        A better way to connect with your customers
+        Elevate Your Customer Engagement with Our AI-Powered Omnichannel
+        Solution
       </Header>
       <Text className={styles.subtext} subtext>
-        AI-based omnichannel shared inbox for customer support over Voice,
-        Email, Live Chat, SMS, and WhatsApp.
+        Connect with customers on Voice, Email, Live Chat, SMS, and WhatsApp for
+        seamless, personalized service. Boost efficiency with our unified
+        customer view and AI-powered automations.
       </Text>
       <div className={styles.formWrapper}>
         <Input
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           placeholder="Enter your email"
           wrapperProps={{
             className: styles.input,
@@ -100,6 +109,7 @@ const HeroLeft = () => {
           height="52px"
         />
         <Button
+          href={getSignupUrl(value)}
           className={styles.button}
           color="black"
           height="52px"

@@ -29,11 +29,12 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Channel-specific reports
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Our reporting system offers channel-specific reports to help you track
+        and analyze your customer interactions across various channels, giving
+        you a comprehensive view of your customer support.
       </Text>
     </Content>
   );

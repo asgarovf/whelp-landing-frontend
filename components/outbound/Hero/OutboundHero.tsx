@@ -17,6 +17,7 @@ export const OutboundHero = () => {
 
   return (
     <DualGrid
+      maxHeight
       gap={gap}
       leftClassName={styles.left}
       rightClassName={styles.right}
@@ -45,10 +46,11 @@ const HeroLeft = () => {
   return (
     <Content className={styles.content}>
       <Header inheritStyles="hero" as="h1">
-        Automate your campaign
+        Automate your campaigns with ease
       </Header>
       <Text className={styles.subtext} subtext>
-        Send bulk messages via WhatsApp, Telegram, Email, Facebook Messenger.
+        Automate your marketing efforts with our campaign automation tools,
+        saving time and resources while reaching your audience efficiently.
       </Text>
       <div className={styles.formWrapper}>
         <Button

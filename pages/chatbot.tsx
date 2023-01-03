@@ -15,7 +15,7 @@ import {
   Navbar,
 } from 'components';
 import { Container, Layout } from 'ui';
-import { inboxFeatureData } from 'utils/data';
+import { chatbotFeatureData } from 'utils/data';
 
 export default function Home() {
   return (
@@ -39,7 +39,7 @@ export default function Home() {
           <BotFlow />
           <BotCondition />
           <BotChannels />
-          <Features items={inboxFeatureData} />
+          <Features items={chatbotFeatureData} />
           <FAQ />
         </Container>
         <Footer />
