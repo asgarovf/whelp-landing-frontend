@@ -1,0 +1,43 @@
+.successWrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--wh-black);
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
+
+.circle {
+  background-color: var(--wh-green-5);
+  display: flex;
+  flex-shrink: 0;
+  width: 64px;
+  height: 56px;
+  border-radius: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.head {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+.button {
+  margin-top: 32px;
+}

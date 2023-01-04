@@ -303,10 +303,10 @@ export const footerData = [
     header: 'Products',
     items: productItems,
   },
-  {
-    header: 'Solutions',
-    items: solutionItems,
-  },
+  // {
+  //   header: 'Solutions',
+  //   items: solutionItems,
+  // },
   {
     header: 'Resources',
     items: resourcesItems,

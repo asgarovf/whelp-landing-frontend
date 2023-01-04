@@ -1,5 +1,5 @@
-import { CheckCircle } from 'assets/icons';
 import FormImage from 'assets/images/request-demo/form.png';
+import { Success } from 'components';
 import {
   BaseSyntheticEvent,
   useCallback,
@@ -89,6 +89,7 @@ export const DemoForm = () => {
       if (isCalendlyEvent(e)) {
         if (e.data.event === 'calendly.event_scheduled') {
           setPage(Page.SUCCESS);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       }
     };
@@ -209,25 +210,7 @@ export const DemoForm = () => {
         ref={calendlyRef}
       ></div>
 
-      {page === Page.SUCCESS && (
-        <div className={styles.successWrapper}>
-          <div className={styles.circle}>
-            <Icon size={32}>
-              <CheckCircle />
-            </Icon>
-          </div>
-          <span className={styles.head}>
-            You’ve successfully submited demo request
-          </span>
-          <Text className={styles.text} subtext>
-            Your request is taken. We will get back to you as soon as possible!
-          </Text>
-
-          <Button href="/" className={styles.button} color="black">
-            Back to homepage
-          </Button>
-        </div>
-      )}
+      {page === Page.SUCCESS && <Success />}
     </div>
   );
 };

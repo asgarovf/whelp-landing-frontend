@@ -70,3 +70,4 @@ export { Team } from './about/Team/Team';
 export { Contact } from './Contact/Contact';
 export { PricingComponent } from './PricingComponent/PricingComponent';
 export { DemoForm } from './DemoForm/DemoForm';
+export { Success } from './Success/Success';
