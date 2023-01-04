@@ -134,7 +134,7 @@ export const ContactForm = () => {
       )}
       {page === Page.SUCCESS && (
         <div ref={successRef} className={styles.success}>
-          <Success fullWidth />
+          <Success fullWidth text={'You’ve successfully submited the form'} />
         </div>
       )}
     </>
