@@ -49,8 +49,9 @@ const Left = () => {
         Contact us
       </Header>
       <Text className={styles.text} subtext>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et elit eu
-        mauris lobortis fringilla a eu lectus.
+        For inquiries or support related to Whelp, please contact us using the
+        form on this page or use the provided email address and phone number to
+        contact us directly.
       </Text>
       <div className={styles.items}>
         {items.map((item) => {
