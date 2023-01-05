@@ -17,9 +17,8 @@ export const TrustedBy = () => {
           <div className={styles.item}>
             <img className={styles.image} src={Techstars.src} alt="Techstars" />
             <Text className={styles.itemText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et
-              elit eu mauris lobortis fringilla a eu lectus. Curabitur neque
-              ante, vehicula non lectus in, euismod consectetur turpis.
+              Whelp is proud to be a part of the Techstars portfolio, helping to
+              drive innovation and success in the world of customer support.
             </Text>
           </div>
           <div className={styles.item}>
@@ -29,9 +28,10 @@ export const TrustedBy = () => {
               alt="Five Hundred Startups"
             />
             <Text className={styles.itemText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et
-              elit eu mauris lobortis fringilla a eu lectus. Curabitur neque
-              ante, vehicula non lectus in, euismod consectetur turpis.
+              As a part of the 500 Startups accelerator program, Whelp has
+              gained access to a global network of mentors, advisors, and
+              investors, providing valuable resources and support as we continue
+              to grow and scale our business.
             </Text>
           </div>
         </div>

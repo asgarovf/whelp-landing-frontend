@@ -14,14 +14,18 @@ export const Team = () => {
           Some cool things about us
         </Header>
         <Text subtext className={styles.subtext}>
-          Whelp offers tools and omnichannel solutions to help businesses
-          streamline conversations through their customers’ preferred channels —
-          like SMS, Voice, WhatsApp, WeChat, Messenger, Email and Live Chat, and
-          other social messengers. Whelp gives agents a powerful platform to
-          enhance the customer support and end consumers instant, safe and
-          secure access to information they need. It also means they can spend
-          less time on hold, avoid repeating stories to multiple agents, and get
-          more time to do what they love.
+          At Whelp, we are dedicated to helping companies communicate with their
+          customers more effectively and efficiently. Our conversational
+          customer support platform allows businesses to easily connect with
+          customers on their preferred channels, including SMS, voice, WhatsApp,
+          WeChat, Messenger, email, and live chat. With our AI-based chatbot,
+          companies can automate up to 60% of customer inquiries, freeing up
+          their teams to focus on more complex issues. Additionally, our
+          customer management platform offers a feature-rich interface that
+          unifies messaging from multiple channels into a single screen. Based
+          in New York, USA, Whelp currently powers customer support for over 550
+          companies in 16 countries and is proud to be part of the 500 Startups
+          and Techstars portfolio.
         </Text>
         <div className={styles.items}>
           <div className={styles.item}>

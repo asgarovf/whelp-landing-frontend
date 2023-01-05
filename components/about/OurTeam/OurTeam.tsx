@@ -12,8 +12,10 @@ export const OurTeam = () => {
           Our awesome team
         </Header>
         <Text subtext className={styles.subtext}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et elit
-          eu mauris lobortis fringilla a eu lectus.
+          Our team is made up of talented and experienced professionals who are
+          dedicated to delivering the best possible customer experience. From
+          our customer service reps to our developers, everyone at our company
+          is committed to helping our clients succeed.
         </Text>
         <div className={styles.imageWrapper}>
           <img src={OurTeamImage.src} alt="Our team" className={styles.image} />
