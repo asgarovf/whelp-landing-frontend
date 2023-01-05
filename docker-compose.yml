@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  whelp-landing:
+    container_name: whelp-landing
+    image: whelp-landing:1.0.0
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    restart: unless-stopped

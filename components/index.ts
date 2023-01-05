@@ -37,7 +37,7 @@ export { ManageContacts } from './crm/ManageContacts/ManageContacts';
 export { MergeContacts } from './crm/MergeContacts/MergeContacts';
 export { ExportData } from './crm/ExportData/ExportData';
 export { AddTag } from './crm/AddTag/AddTag';
-export { ReportingHero } from './reporting/Hero/RreportingHero';
+export { ReportingHero } from './reporting/Hero/ReportingHero';
 export { AverageHandlingTime } from './reporting/AverageHandlingTime/AverageHandlingTime';
 export { FirstResponseTime } from './reporting/FirstResponseTime/FirstResponseTime';
 export { ChatbotReports } from './reporting/ChatbotReports/ChatbotReports';

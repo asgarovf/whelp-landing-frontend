@@ -3,6 +3,7 @@ import HeroRightBackground from 'assets/images/outbound/hero/right.png';
 import { useGap } from 'hooks';
 import Image from 'next/image';
 import { Button, Content, Header, Text } from 'ui';
+import { getSignupUrl } from 'utils/getSignupUrl';
 
 import { DualGrid } from 'components/DualGrid/DualGrid';
 
@@ -54,6 +55,7 @@ const HeroLeft = () => {
       </Text>
       <div className={styles.formWrapper}>
         <Button
+          href={getSignupUrl()}
           rigthEl={<ArrowRight />}
           className={styles.button}
           color="black"

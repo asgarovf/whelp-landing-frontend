@@ -1,3 +1,5 @@
+import { apiCreateContact } from 'queries';
+import { ContactCreateDto } from 'queries/types';
 import {
   BaseSyntheticEvent,
   useCallback,
@@ -6,6 +8,7 @@ import {
   useRef,
   useState,
 } from 'react';
+import { useMutation } from 'react-query';
 import { Button, Input, Select, TextArea } from 'ui';
 import { SelectOption, teamSizeOptions } from 'utils/teamSizeOptions';
 import { isEmail, isEmpty } from 'utils/validators';
@@ -48,8 +51,21 @@ export const ContactForm = () => {
     return c1 || c2 || c3 || c4 || c6;
   }, [state, teamSize]);
 
+  const contactMutation = useMutation({
+    mutationFn: (data: ContactCreateDto) => apiCreateContact(data),
+    mutationKey: ['CONTACT_MUTATION'],
+    onSuccess: () => {
+      setPage(Page.SUCCESS);
+    },
+  });
+
   const onSubmit = useCallback(() => {
-    setPage(Page.SUCCESS);
+    const payload = {
+      ...state,
+      team_size: teamSize?.value,
+    };
+
+    contactMutation.mutate(payload);
   }, []);
 
   useEffect(() => {
@@ -122,6 +138,7 @@ export const ContactForm = () => {
               onClick={checked.toggle}
             /> */}
             <Button
+              loading={contactMutation.isLoading}
               onClick={onSubmit}
               disabled={isDisabled}
               className={styles.button}

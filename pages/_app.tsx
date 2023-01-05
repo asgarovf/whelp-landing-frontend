@@ -1,11 +1,14 @@
 import { useInitialTheme } from 'hooks';
 import type { AppProps } from 'next/app';
 import NextNProgress from 'nextjs-progressbar';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { GlobalContextProvider } from 'store/global';
 import 'styles/globals.scss';
 import { getFonts } from 'utils/getFonts';
 
 const { poppins, cooper } = getFonts();
+
+export const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   useInitialTheme();
@@ -31,7 +34,9 @@ export default function App({ Component, pageProps }: AppProps) {
         `}
       </style>
       <NextNProgress color="black" />
-      <Component {...pageProps} />{' '}
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />{' '}
+      </QueryClientProvider>
     </GlobalContextProvider>
   );
 }
