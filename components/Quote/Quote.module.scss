@@ -12,8 +12,12 @@
 
 .quote {
   font-size: 32px !important;
-  line-height: 44px;
+  line-height: 44px !important;
   text-align: center;
+
+  @media (max-width: $bp-sm) {
+    line-height: 32px !important;
+  }
 }
 
 @media (max-width: $bp-sm) {
