@@ -5,7 +5,10 @@ import { Container, Header, Layout, Text } from 'ui';
 export default function PrivacyPolicy() {
   return (
     <>
-      <DocumentHead title="Privacy policy" />
+      <DocumentHead
+        title="Privacy policy"
+        description="Our privacy policy explains how we collect, use, and protect customer data to ensure the privacy and security of our users."
+      />
       <Layout>
         <Navbar />
         <div className={styles.wrapper}>

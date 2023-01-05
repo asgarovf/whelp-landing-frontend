@@ -1,12 +1,16 @@
 import Seymur from 'assets/images/homepage/quote/seymur.png';
 import {
   DocumentHead,
+  FAQ,
   Footer,
+  IntegrationItems,
+  IntegrationsIntro,
   Navbar,
   PricingComponent,
   Quote,
 } from 'components';
-import { Layout } from 'ui';
+import { Container, Layout } from 'ui';
+import { IntegrationsData } from 'utils/integrations';
 
 export default function Pricing() {
   return (
@@ -21,6 +25,18 @@ export default function Pricing() {
           image={Seymur}
           title="Seymur Rasulov"
         />
+        <Container>
+          <IntegrationsIntro
+            showButton
+            search=""
+            category={null}
+            setSearch={() => undefined}
+            setCategory={() => undefined}
+            disableSearch
+          />
+          <IntegrationItems items={IntegrationsData} search="" itemLimit={8} />
+        </Container>
+        <FAQ />
         <Footer />
       </Layout>
     </>

@@ -28,7 +28,10 @@ export default function Home() {
 
   return (
     <>
-      <DocumentHead title="Home" />
+      <DocumentHead
+        title="Home - Omnichannel Inbox with AI Capabilities"
+        description="Streamline your customer communication with our omnichannel CRM platform. Use our AI-powered chatbot to provide personalized support and recommendations."
+      />
       <Layout>
         <Navbar />
         <Container>

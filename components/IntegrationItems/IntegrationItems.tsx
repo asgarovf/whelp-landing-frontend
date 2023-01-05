@@ -8,12 +8,17 @@ import styles from './IntegrationItems.module.scss';
 type Props = {
   items: IntegrationItem[];
   search: string;
+  itemLimit?: number;
 };
 
-export const IntegrationItems = ({ items, search }: Props) => {
+export const IntegrationItems = ({
+  items,
+  search,
+  itemLimit = Infinity,
+}: Props) => {
   return (
     <div className={styles.wrapper}>
-      {items.map((item, index) => {
+      {items.slice(0, itemLimit).map((item, index) => {
         return (
           <div key={index} className={styles.item}>
             <div className={styles.itemImage}>

@@ -5,7 +5,10 @@ import { Container, Header, Layout, Text } from 'ui';
 export default function TermsOfService() {
   return (
     <>
-      <DocumentHead title="Terms of service" />
+      <DocumentHead
+        title="Terms of service"
+        description="Our terms of service outline the terms and conditions for using our platform and services."
+      />
       <Layout>
         <Navbar />
         <div className={styles.wrapper}>

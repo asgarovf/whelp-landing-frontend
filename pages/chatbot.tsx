@@ -20,7 +20,10 @@ import { chatbotFeatureData } from 'utils/data';
 export default function Home() {
   return (
     <>
-      <DocumentHead title="Chatbot" />
+      <DocumentHead
+        title="Chatbot - AI-Powered Chatbot Capabilities"
+        description="Enhance your customer support with our AI-powered chatbot. Use it to answer common questions, provide personalized recommendations, and escalate complex issues to a human agent."
+      />
       <Layout>
         <Navbar />
         <Container>

@@ -90,7 +90,7 @@
 .columns {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-left: 186px;
   gap: 24px;
 
@@ -179,4 +179,8 @@
       margin-right: 1rem;
     }
   }
+}
+
+.copyright {
+  margin-top: 0px !important;
 }

@@ -123,7 +123,7 @@ export const DemoForm = () => {
             <Header as="h1" inheritStyles="h1" className={styles.header}>
               Request a demo
             </Header>
-            <Text subtext>
+            <Text subtext className={styles.subtext}>
               See how your customer support can transform into a lively, timely
               and super-efficient service with the tools and features we offer.
             </Text>

@@ -21,7 +21,10 @@ import { crmFeatureData, inboxFeatureData } from 'utils/data';
 export default function Home() {
   return (
     <>
-      <DocumentHead title="CRM" />
+      <DocumentHead
+        title="CRM - Comprehensive CRM Solutions"
+        description="Boost your customer relationship management with our advanced CRM tools. Use our platform to track customer interactions, gather data, and deliver personalized experiences."
+      />
       <Layout>
         <Navbar />
         <Container>

@@ -1,5 +1,6 @@
 import useResizeObserver from '@react-hook/resize-observer';
 import {
+  ArrowRight,
   CheckCircle,
   ChevronDown,
   Close,
@@ -8,7 +9,7 @@ import {
 } from 'assets/icons';
 import { useDropdown, useOnClickOutside } from 'hooks';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Header, Icon, Text } from 'ui';
+import { Button, Header, Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 import { IntegrationCategory } from 'utils/integrations';
 
@@ -19,6 +20,8 @@ type Props = {
   setCategory: (to: null | IntegrationCategory) => void;
   search: string;
   setSearch: (to: string) => void;
+  disableSearch?: boolean;
+  showButton?: boolean;
 };
 
 export const IntegrationsIntro = ({
@@ -26,6 +29,8 @@ export const IntegrationsIntro = ({
   search,
   setSearch,
   setCategory,
+  disableSearch,
+  showButton,
 }: Props) => {
   const [searchFocused, setSearchFocused] = useState(false);
   const outsideRef = useOnClickOutside<HTMLDivElement>(() => {
@@ -65,7 +70,7 @@ export const IntegrationsIntro = ({
     useDropdown({ placement, topDistance: 12 });
 
   return (
-    <div className={styles.wrapper}>
+    <div className={clsnm(styles.wrapper, showButton && styles.showButton)}>
       <div className={styles.content}>
         <Header inheritStyles="h1" className={styles.header} as="h2">
           Explore integrations
@@ -74,113 +79,130 @@ export const IntegrationsIntro = ({
           Our integrations make it easy to work with the applications your teams
           already love.
         </Text>
-        <div className={styles.searchWrapper}>
-          <div ref={closeRef}>
+        {showButton && (
+          <Button
+            href="/integrations"
+            className={styles.button}
+            rigthEl={
+              <Icon>
+                <ArrowRight />
+              </Icon>
+            }
+            color="transparent"
+            width="max-content"
+          >
+            Learn more
+          </Button>
+        )}
+        {!disableSearch && (
+          <div className={styles.searchWrapper}>
+            <div ref={closeRef}>
+              <div
+                onClick={() => {
+                  if (!isSearchActive) {
+                    open();
+                  }
+                }}
+                ref={reference}
+                className={clsnm(
+                  styles.integrations,
+                  styles.box,
+                  isOpen && styles.active,
+                )}
+              >
+                <Icon size={24}>
+                  <FilterList />
+                </Icon>
+                {!isSearchActive && (
+                  <>
+                    <span className={styles.text}>
+                      {category === null ? 'All integrations' : category}
+                    </span>
+                    <Icon className={styles.chevronBottom}>
+                      <ChevronDown />
+                    </Icon>
+                  </>
+                )}
+              </div>
+              {isOpen && (
+                <div
+                  ref={floating}
+                  style={popperStyles}
+                  className={styles.popper}
+                >
+                  <div
+                    onClick={() => {
+                      setCategory(null);
+                      close();
+                    }}
+                    className={styles.popperItem}
+                  >
+                    <span>All categories</span>
+                    {category == null && (
+                      <Icon className={styles.icon}>
+                        <CheckCircle />
+                      </Icon>
+                    )}
+                  </div>
+                  {Object.keys(IntegrationCategory).map((item, index) => {
+                    const cat = (IntegrationCategory as any)[item];
+
+                    return (
+                      <div
+                        onClick={() => {
+                          setCategory(cat);
+                          close();
+                        }}
+                        key={index}
+                        className={styles.popperItem}
+                      >
+                        <span>{cat}</span>
+                        {category === cat && (
+                          <Icon className={styles.icon}>
+                            <CheckCircle />
+                          </Icon>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
             <div
-              onClick={() => {
-                if (!isSearchActive) {
-                  open();
-                }
-              }}
-              ref={reference}
+              ref={outsideRef}
+              onClick={() => setSearchFocused(true)}
               className={clsnm(
-                styles.integrations,
+                styles.search,
                 styles.box,
-                isOpen && styles.active,
+                isSearchActive && styles.active,
               )}
             >
-              <Icon size={24}>
-                <FilterList />
+              <Icon>
+                <Search />
               </Icon>
-              {!isSearchActive && (
+              {isSearchActive && (
                 <>
-                  <span className={styles.text}>
-                    {category === null ? 'All integrations' : category}
-                  </span>
-                  <Icon className={styles.chevronBottom}>
-                    <ChevronDown />
-                  </Icon>
+                  <input
+                    placeholder="Search"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    ref={inputRef}
+                    className={clsnm(styles.input, 'poppins')}
+                  />
+                  {search !== '' && (
+                    <Icon
+                      onClick={() => setSearch('')}
+                      className={styles.closeIcon}
+                    >
+                      <Close />
+                    </Icon>
+                  )}
                 </>
               )}
             </div>
-            {isOpen && (
-              <div
-                ref={floating}
-                style={popperStyles}
-                className={styles.popper}
-              >
-                <div
-                  onClick={() => {
-                    setCategory(null);
-                    close();
-                  }}
-                  className={styles.popperItem}
-                >
-                  <span>All categories</span>
-                  {category == null && (
-                    <Icon className={styles.icon}>
-                      <CheckCircle />
-                    </Icon>
-                  )}
-                </div>
-                {Object.keys(IntegrationCategory).map((item, index) => {
-                  const cat = (IntegrationCategory as any)[item];
-
-                  return (
-                    <div
-                      onClick={() => {
-                        setCategory(cat);
-                        close();
-                      }}
-                      key={index}
-                      className={styles.popperItem}
-                    >
-                      <span>{cat}</span>
-                      {category === cat && (
-                        <Icon className={styles.icon}>
-                          <CheckCircle />
-                        </Icon>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
-
-          <div
-            ref={outsideRef}
-            onClick={() => setSearchFocused(true)}
-            className={clsnm(
-              styles.search,
-              styles.box,
-              isSearchActive && styles.active,
-            )}
-          >
-            <Icon>
-              <Search />
-            </Icon>
-            {isSearchActive && (
-              <>
-                <input
-                  placeholder="Search"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  ref={inputRef}
-                  className={clsnm(styles.input, 'poppins')}
-                />
-                {search !== '' && (
-                  <Icon
-                    onClick={() => setSearch('')}
-                    className={styles.closeIcon}
-                  >
-                    <Close />
-                  </Icon>
-                )}
-              </>
-            )}
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

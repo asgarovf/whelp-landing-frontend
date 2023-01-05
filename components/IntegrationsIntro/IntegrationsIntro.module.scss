@@ -4,9 +4,17 @@
   padding-top: 120px;
   padding-bottom: 80px;
 
+  &.showButton {
+    padding-bottom: 48px;
+  }
+
   @media (max-width: $bp-sm) {
     padding-top: 40px;
     padding-bottom: 40px;
+
+    &.showButton {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -152,4 +160,8 @@
 
 .icon {
   margin-left: auto;
+}
+
+.button {
+  margin-top: 32px;
 }

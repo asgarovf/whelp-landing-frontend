@@ -36,8 +36,8 @@ export const PricingComponent = () => {
 
       <Container>
         <div className={styles.items}>
-          {ITEMS.map((item) => (
-            <div className={styles.item}>
+          {ITEMS.map((item, key) => (
+            <div key={key} className={styles.item}>
               <span className={styles.type}>{item.type}</span>
               <span className={styles.itemSubtext}>{item.subtext}</span>
               <div className={styles.itemPrice}>

@@ -79,7 +79,9 @@ export const Footer = ({ include = true }: Props) => {
       </div>
       <div className={styles.copyRight}>
         <Container className={styles.copyRightContent}>
-          <Text subtext>Copyright © 2022, Whelp, Inc.</Text>
+          <Text subtext className={styles.copyright}>
+            Copyright © 2022, Whelp, Inc.
+          </Text>
           <div className={styles.social}>
             <a
               href="https://www.facebook.com/getwhelp/"

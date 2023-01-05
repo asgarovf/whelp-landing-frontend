@@ -16,6 +16,7 @@ export const TableFields = () => {
 
   return (
     <DualGrid
+      reverseOnMobile
       className={styles.wrapper}
       paddingY={80}
       rightClassName={styles.right}

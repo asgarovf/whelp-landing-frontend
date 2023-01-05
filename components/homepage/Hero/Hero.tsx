@@ -93,8 +93,7 @@ const HeroLeft = () => {
   return (
     <Content>
       <Header inheritStyles="hero" as="h1">
-        Elevate Your Customer Engagement with Our AI-Powered Omnichannel
-        Solution
+        Elevate Your Customer Support with Our Omnichannel Solution
       </Header>
       <Text className={styles.subtext} subtext>
         Connect with customers on Voice, Email, Live Chat, SMS, and WhatsApp for

@@ -24,7 +24,10 @@ import { inboxFeatureData } from 'utils/data';
 export default function Home() {
   return (
     <>
-      <DocumentHead title="Inbox" />
+      <DocumentHead
+        title="Inbox - Streamline Your Customer Communications"
+        description="Manage all of your customer interactions in one place with our comprehensive inbox. Use our AI capabilities to prioritize and respond to inquiries efficiently."
+      />
       <Layout>
         <Navbar />
         <Container>

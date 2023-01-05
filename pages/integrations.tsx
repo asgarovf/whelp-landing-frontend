@@ -47,7 +47,10 @@ export default function Integrations() {
 
   return (
     <>
-      <DocumentHead title="Integrations" />
+      <DocumentHead
+        title="Integrations - Integrate with Your Existing Tools"
+        description="Integrate our platform with your other business tools to create a seamless customer experience. Our platform integrates with a variety of tools to help you manage your customer interactions efficiently."
+      />
       <Layout>
         <Navbar />
         <Container>
