@@ -31,13 +31,6 @@ export const FeatureItemRenderer = ({
   const ref = useRef<HTMLDivElement>(null);
   const [observerRef, inview] = useInView({ threshold: 0.5 });
 
-  useEffect(() => {
-    if (ref.current == null) return;
-    if (inview) {
-      ref.current.classList.add(styles[`fadeIn${index}`]);
-    }
-  }, [inview]);
-
   return (
     <div
       ref={mergeRefs([observerRef, ref])}
