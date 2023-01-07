@@ -16,6 +16,7 @@ export const EmailCompose = () => {
 
   return (
     <DualGrid
+      className={styles.wrapper}
       reverseOnMobile
       paddingY={80}
       rightClassName={styles.right}

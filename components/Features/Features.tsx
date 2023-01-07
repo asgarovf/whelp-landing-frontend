@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { mergeRefs } from 'react-merge-refs';
 import { FeatureItem } from 'types';

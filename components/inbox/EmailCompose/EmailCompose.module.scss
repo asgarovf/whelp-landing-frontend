@@ -36,3 +36,10 @@
     object-fit: contain;
   }
 }
+
+.wrapper {
+  padding-top: 120px !important;
+  @media (max-width: $bp-sm) {
+    padding-top: 60px !important;
+  }
+}

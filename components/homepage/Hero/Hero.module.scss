@@ -3,7 +3,7 @@
 .imageWrapper {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-end;
 
   & .inner {
     display: flex;
@@ -21,7 +21,7 @@
     left: 50%;
     bottom: 0px;
     transform: translateX(-50%);
-    width: 60%;
+    width: 100%;
     height: 100%;
     z-index: 4;
   }
@@ -49,7 +49,7 @@
 
   & .leftCenter {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: -5%;
     width: 180px;
     height: 92px;
@@ -73,7 +73,7 @@
   & .bottomRight {
     position: absolute;
     bottom: 10%;
-    right: 5%;
+    right: 0%;
     width: 248px;
     height: 84px;
     z-index: 6;
@@ -88,27 +88,6 @@
       width: 160px;
       height: 52px;
     }
-  }
-
-  & .lineBottom {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -8px;
-    bottom: 0px;
-    z-index: 5;
-    overflow: hidden;
-  }
-
-  & .lineTop {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 3;
-    left: -8px;
-    bottom: 0px;
-    overflow: hidden;
-    top: 0px;
   }
 }
 
@@ -147,6 +126,7 @@
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
   border-right: 0px;
+  background-color: var(--input-bg);
 
   @media (max-width: $bp-sm) {
     border-right: 2px solid var(--wh-black);

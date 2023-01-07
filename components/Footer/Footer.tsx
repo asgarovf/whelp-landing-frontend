@@ -14,13 +14,13 @@ interface Props extends ComponentPropsWithoutRef<'div'> {
   include?: boolean;
 }
 
-export const Footer = ({ include = true }: Props) => {
+export const Footer = ({ include = true, className, ...props }: Props) => {
   const router = useRouter();
 
   return (
     <>
       {include && (
-        <div className={styles.topWrapper}>
+        <div {...props} className={clsnm(styles.topWrapper, className)}>
           <Container width={588}>
             <Header className={styles.topHeader} as="h4" inheritStyles="h1">
               Get started now!

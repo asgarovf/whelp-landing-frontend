@@ -31,7 +31,7 @@ export default function About() {
         <Container>
           <Features items={homeData} />
         </Container>
-        <Footer />
+        <Footer className="footer-top" />
       </Layout>
     </>
   );

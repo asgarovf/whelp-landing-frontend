@@ -71,8 +71,8 @@ export const DualGrid = ({
     return `${pY}px`;
   }, [small, pY]);
 
-  const [leftViewRef, inViewLeft] = useInView({ threshold: 0.5 });
-  const [rightViewRef, inViewRight] = useInView({ threshold: 0.5 });
+  const [leftViewRef, inViewLeft] = useInView({ threshold: 0.25 });
+  const [rightViewRef, inViewRight] = useInView({ threshold: 0.25 });
 
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
