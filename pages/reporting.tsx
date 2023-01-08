@@ -38,7 +38,11 @@ export default function Home() {
           <ChannelReports />
           <ReportsOverview />
           <RangeFilter />
-          <Features items={reportingFeatureData} />
+          <Features
+            disableMarginBottom
+            disableMarginTop
+            items={reportingFeatureData}
+          />
           <FAQ />
         </Container>
         <Footer />

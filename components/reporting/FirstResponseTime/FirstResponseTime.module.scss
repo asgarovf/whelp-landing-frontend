@@ -44,3 +44,11 @@
     object-fit: contain;
   }
 }
+
+.wrapper {
+  padding-bottom: 120px !important;
+
+  @media (max-widgth: $bp-sm) {
+    padding-bottom: 60px !important;
+  }
+}
