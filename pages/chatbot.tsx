@@ -42,7 +42,11 @@ export default function Home() {
           <BotFlow />
           <BotCondition />
           <BotChannels />
-          <Features items={chatbotFeatureData} />
+          <Features
+            disableMarginBottom
+            disableMarginTop
+            items={chatbotFeatureData}
+          />
           <FAQ />
         </Container>
         <Footer />

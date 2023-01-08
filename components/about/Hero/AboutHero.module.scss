@@ -21,6 +21,7 @@
 }
 
 .items {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
@@ -59,6 +60,7 @@
 
     @media (max-width: $bp-sm) {
       font-size: 32px !important;
+      line-height: 40px !important;
     }
   }
 

@@ -40,7 +40,11 @@ export default function Home() {
           <ScheduleOutbound />
           <Personalization />
           <SelectChannel />
-          <Features items={outboundFeatureData} />
+          <Features
+            disableMarginBottom
+            disableMarginTop
+            items={outboundFeatureData}
+          />
           <FAQ />
         </Container>
         <Footer />

@@ -1,4 +1,4 @@
-import { Mail, Map, Phone } from 'assets/icons';
+import { ArrowRight, Mail, Map, Phone } from 'assets/icons';
 import { useGap } from 'hooks';
 import { Header, Icon, Text } from 'ui';
 
@@ -29,16 +29,22 @@ const items = [
     name: 'Email',
     value: 'hello@whelp.co',
     icon: <Mail />,
+    href: 'mailto:hello@whelp.co',
+    target: '_blank',
   },
   {
     name: 'Phone',
-    value: 'New York, United States',
+    value: '217-3748272',
     icon: <Phone />,
+    href: 'tel:+12173748272',
+    target: '_blank',
   },
   {
     name: 'Address',
-    value: 'hello@whelp.co',
+    value: 'New York, United States',
     icon: <Map />,
+    href: 'https://goo.gl/maps/ALxAG8dv2DUzBjir6',
+    target: '_blank',
   },
 ];
 
@@ -56,7 +62,13 @@ const Left = () => {
       <div className={styles.items}>
         {items.map((item) => {
           return (
-            <div key={item.name} className={styles.item}>
+            <a
+              referrerPolicy="no-referrer"
+              href={item.href}
+              target={item.target}
+              key={item.name}
+              className={styles.item}
+            >
               <div className={styles.icon}>
                 <Icon size={24}>{item.icon}</Icon>
               </div>
@@ -66,7 +78,10 @@ const Left = () => {
                   {item.value}
                 </Text>
               </div>
-            </div>
+              <Icon className={styles.arrowRight}>
+                <ArrowRight />
+              </Icon>
+            </a>
           );
         })}
       </div>

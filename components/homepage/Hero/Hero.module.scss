@@ -5,6 +5,10 @@
   width: 100%;
   justify-content: flex-end;
 
+  @media (max-width: $bp-sm) {
+    justify-content: center;
+  }
+
   & .inner {
     display: flex;
     position: relative;
@@ -50,7 +54,7 @@
   & .leftCenter {
     position: absolute;
     top: 40%;
-    left: -5%;
+    left: -14%;
     width: 180px;
     height: 92px;
     z-index: 2;

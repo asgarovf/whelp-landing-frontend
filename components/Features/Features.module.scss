@@ -1,8 +1,8 @@
 @import 'styles/vars.scss';
 
 .wrapper {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   overflow: auto;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -22,7 +22,17 @@
     gap: 0px;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+}
+
+.disableMarginTop {
+  margin-top: 0px !important;
+}
+
+.disableMarginBottom {
+  margin-bottom: 0px !important;
 }
 
 .item {
@@ -39,6 +49,7 @@
   & .title {
     margin-top: 20px;
     font-size: 20px;
+    font-weight: 500 !important;
   }
 
   & .content {

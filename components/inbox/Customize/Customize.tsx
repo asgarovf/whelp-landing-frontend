@@ -30,11 +30,11 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        CRM that you’ve been looking for
+        Customize As You Want
       </Header>
       <Text className={styles.subtext} subtext>
-        Upgrade your customer support with our features. We collect all of your
-        user data on one platform.
+        Enhance your customer support experience by customizing your inbox with
+        options like bolding text and other standard features.
       </Text>
     </Content>
   );

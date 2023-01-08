@@ -48,13 +48,14 @@ export const Select = ({ inputProps, value, onChange, options }: Props) => {
         <Input
           value={value ?? ''}
           wrapperRef={inputRef}
-          className={styles.input}
+          className={clsnm(styles.input, isOpen && styles.focus)}
           {...inputProps}
           disabled
           onChange={(e) => {
             e.preventDefault();
             return;
           }}
+          focused={isOpen}
           inheritDefaultStyles
         />
         <Icon className={styles.chevron}>
@@ -63,30 +64,32 @@ export const Select = ({ inputProps, value, onChange, options }: Props) => {
       </div>
       {isOpen && (
         <div
-          className={styles.menu}
+          className={styles.optionMenu}
           ref={mergeRefs([floating, menuRef])}
           style={{ ...popperStyles }}
         >
-          {options.map((item) => (
-            <div
-              key={item.key}
-              onClick={() => {
-                close();
-                onChange(item);
-              }}
-              className={clsnm(
-                styles.option,
-                item.key === value && styles.selected,
-              )}
-            >
-              <span>{item.label}</span>
-              {value === item.key && (
-                <Icon className={styles.checkIcon}>
-                  <CheckCircle />
-                </Icon>
-              )}
-            </div>
-          ))}
+          <div className={styles.menu}>
+            {options.map((item) => (
+              <div
+                key={item.key}
+                onClick={() => {
+                  close();
+                  onChange(item);
+                }}
+                className={clsnm(
+                  styles.option,
+                  item.key === value && styles.selected,
+                )}
+              >
+                <span>{item.label}</span>
+                {value === item.key && (
+                  <Icon className={styles.checkIcon}>
+                    <CheckCircle />
+                  </Icon>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

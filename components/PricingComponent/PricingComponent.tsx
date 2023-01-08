@@ -49,8 +49,11 @@ export const PricingComponent = () => {
                     {tab === 0 ? 'user / month' : 'user / month'}
                   </span>
                 )}
-                {item.save != null && (
+                {item.save != null && tab === 0 && (
                   <div className={styles.save}>{item.save}</div>
+                )}
+                {item.saveAnnual != null && tab === 1 && (
+                  <div className={styles.save}>{item.saveAnnual}</div>
                 )}
               </div>
               <Button
@@ -132,6 +135,7 @@ const ITEMS = [
     buttonType: 'transparent',
     buttonText: 'Get started',
     save: null,
+    saveAnnual: null,
     items: ['Live Chat widget for website', 'Unified inbox', 'CRM'],
   },
   {
@@ -141,7 +145,8 @@ const ITEMS = [
     priceYear: '$23',
     buttonType: 'black',
     buttonText: 'Try for free',
-    save: 'Save 20%',
+    save: null,
+    saveAnnual: 'Save 20%',
     items: [
       'Channels: LiveChat, Facebook Messenger, Telegram, Instagram, Email',
       'Unlimited MAC',
@@ -149,7 +154,7 @@ const ITEMS = [
       'Flow Base ChatBot',
       'Reporting and analytics - PREBUILT',
       'Onboarding and adoption guidance',
-      'Broadcast (Mass Messaging on WhatsApp*/SMS/Telegram/Email)',
+      'Broadcast (Mass Messaging on WhatsApp* / SMS / Telegram / Email)',
       'Email Support',
       'Role-based permissions',
       'Customer Satisfaction Survey',
@@ -163,6 +168,7 @@ const ITEMS = [
     buttonType: 'black',
     buttonText: 'Try for free',
     save: 'Save 20%',
+    saveAnnual: 'Save 20%',
     items: [
       'Channels: LiveChat, Messenger, Telegram, Instagram, WhatsApp (include 1 number), Twitter, SalesForce, Twilio, Viber, Amazon Connect, Email',
       'Unlimited MAC',
@@ -170,7 +176,7 @@ const ITEMS = [
       'Flow + AI Base ChatBot',
       'Reporting and analytics - PREBUILT & ADVANCED',
       'Onboarding and adoption guidance',
-      'Broadcast (Mass Messaging on WhatsApp*/SMS/Telegram/Email)',
+      'Broadcast (Mass Messaging on WhatsApp* / SMS / Telegram / Email)',
       '24/7 Support (Live, Email, Chat)',
       'Role-based permissions',
       'Customer Satisfaction Survey',

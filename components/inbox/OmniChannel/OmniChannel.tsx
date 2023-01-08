@@ -17,8 +17,8 @@ export const OmniChannel = () => {
           Truly omnichannel
         </Header>
         <Text className={styles.text} subtext>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et elit
-          eu mauris lobortis fringilla a eu lectus.
+          Communicate with your customers on their preferred channels, including
+          SMS, voice, WhatsApp, WeChat, Messenger, email, and live chat.
         </Text>
       </div>
       <div className={styles.channels}>

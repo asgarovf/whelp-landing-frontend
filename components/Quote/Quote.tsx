@@ -9,11 +9,18 @@ type Props = {
   title: string;
   position: string;
   image: StaticImageData;
+  className?: string;
 };
 
-export const Quote = ({ title, content, position, image }: Props) => {
+export const Quote = ({
+  title,
+  content,
+  position,
+  image,
+  className,
+}: Props) => {
   return (
-    <div className={clsnm(styles.wrapper)}>
+    <div className={clsnm(styles.wrapper, className)}>
       <Container width={800} className={styles.container}>
         <Header className={styles.quote} as="h3">
           {content}

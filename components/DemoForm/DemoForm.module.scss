@@ -13,7 +13,7 @@
 
   @media (max-width: $bp-sm) {
     padding-top: 40px;
-    padding-bottom: 60x;
+    padding-bottom: 60px;
   }
 }
 
@@ -86,5 +86,10 @@
   & iframe {
     min-height: 700px;
     transform: translateY(-40px);
+
+    @media (max-width: $bp-sm) {
+      border: 2px solid var(--wh-black);
+      border-radius: 20px;
+    }
   }
 }

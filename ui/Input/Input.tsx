@@ -18,6 +18,7 @@ export interface InputProps extends ComponentPropsWithoutRef<'input'> {
   label?: ReactNode;
   inheritDefaultStyles?: boolean;
   wrapperRef?: RefObject<HTMLDivElement>;
+  focused?: boolean;
 }
 
 export const Input = ({
@@ -35,6 +36,7 @@ export const Input = ({
   onBlur,
   width = '100%',
   label,
+  focused: focusedProp,
   wrapperRef,
   ...props
 }: InputProps & DynamicBorderRadiusProps) => {
@@ -49,7 +51,7 @@ export const Input = ({
           wrapperProps?.className,
           styles.wrapper,
           inheritDefaultStyles && styles.default,
-          focused && styles.focus,
+          (focused || focusedProp) && styles.focus,
         )}
         style={{
           borderBottomLeftRadius: bottomLeftRadius,

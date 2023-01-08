@@ -9,6 +9,7 @@ import {
   PricingComponent,
   Quote,
 } from 'components';
+import styles from 'styles/pages/Pricing.module.scss';
 import { Container, Layout } from 'ui';
 import { IntegrationsData } from 'utils/integrations';
 
@@ -20,6 +21,7 @@ export default function Pricing() {
         <Navbar />
         <PricingComponent />
         <Quote
+          className={styles.wrapper}
           content="“WhatsApp blended with Whelp interface is the ideal tool to reach your audience and promote your product and service.”"
           position="CEO at Whelp, Inc"
           image={Seymur}

@@ -29,7 +29,7 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        Simplify your calling process
+        Calling Has Never Been Easier Before
       </Header>
       <Text className={styles.subtext} subtext>
         Place and receive calls with ease and send voice recordings to customers

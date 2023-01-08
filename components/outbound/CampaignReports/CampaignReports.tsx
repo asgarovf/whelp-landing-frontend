@@ -16,6 +16,7 @@ export const CampaignReports = () => {
 
   return (
     <DualGrid
+      className={styles.wrapper}
       paddingY={80}
       leftClassName={styles.left}
       gap={gap}

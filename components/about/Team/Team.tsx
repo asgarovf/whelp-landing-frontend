@@ -33,6 +33,7 @@ export const Team = () => {
             <Text className={styles.itemHeader}>Seymur Rasulov</Text>
             <Text className={styles.itemText}>CEO & Co-founder</Text>
             <Button
+              target={'_blank'}
               referrerPolicy="no-referrer"
               href="https://www.linkedin.com/in/seymur-rasulov/"
               className={styles.itemButton}
@@ -48,6 +49,7 @@ export const Team = () => {
             <Text className={styles.itemHeader}>Enrike Nur</Text>
             <Text className={styles.itemText}>CTO & Co-founder</Text>
             <Button
+              target={'_blank'}
               referrerPolicy="no-referrer"
               href="https://www.linkedin.com/in/enrikenur/"
               className={styles.itemButton}

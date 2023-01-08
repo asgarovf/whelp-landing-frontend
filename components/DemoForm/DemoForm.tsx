@@ -41,7 +41,7 @@ export const DemoForm = () => {
   const [industry, setIndustry] = useState<SelectOption | null>(null);
   const [jobFunction, setJobFunction] = useState<SelectOption | null>(null);
 
-  const [page, setPage] = useState<Page>(Page.FORM);
+  const [page, setPage] = useState<Page>(Page.CALENDLY);
 
   const { initializedCalendly } = useGlobalStore();
 

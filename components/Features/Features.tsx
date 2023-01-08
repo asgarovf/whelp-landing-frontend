@@ -9,11 +9,23 @@ import styles from './Features.module.scss';
 
 type Props = {
   items: FeatureItem[];
+  disableMarginTop?: boolean;
+  disableMarginBottom?: boolean;
 };
 
-export const Features = ({ items }: Props) => {
+export const Features = ({
+  items,
+  disableMarginTop,
+  disableMarginBottom,
+}: Props) => {
   return (
-    <div className={styles.wrapper}>
+    <div
+      className={clsnm(
+        styles.wrapper,
+        disableMarginTop && styles.disableMarginTop,
+        disableMarginBottom && styles.disableMarginBottom,
+      )}
+    >
       {items.map((item, index) => (
         <FeatureItemRenderer key={index} item={item} index={index} />
       ))}

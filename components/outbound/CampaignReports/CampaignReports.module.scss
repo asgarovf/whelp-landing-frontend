@@ -44,3 +44,10 @@
     object-fit: contain;
   }
 }
+
+.wrapper {
+  padding-bottom: 120px !important;
+  @media (max-width: $bp-sm) {
+    padding-bottom: 60px !important;
+  }
+}

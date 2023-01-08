@@ -53,7 +53,7 @@ export default function Home() {
           <Call />
           <Schedule />
           <Voice />
-          <Features items={inboxFeatureData} />
+          <Features disableMarginBottom items={inboxFeatureData} />
         </Container>
         <Container>
           <FAQ />

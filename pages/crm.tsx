@@ -5,6 +5,7 @@ import {
   Dashboard,
   DocumentHead,
   ExportData,
+  FAQ,
   Features,
   FilterData,
   Footer,
@@ -41,7 +42,12 @@ export default function Home() {
           <MergeContacts />
           <ExportData />
           <AddTag />
-          <Features items={crmFeatureData} />
+          <Features
+            disableMarginTop
+            disableMarginBottom
+            items={crmFeatureData}
+          />
+          <FAQ />
         </Container>
         <Footer />
       </Layout>

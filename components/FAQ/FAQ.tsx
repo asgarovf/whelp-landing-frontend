@@ -6,26 +6,26 @@ import { Header, Icon, Text } from 'ui';
 import styles from './FAQ.module.scss';
 
 const QUESTIONS = [
-  {
-    q: 'Does Whelp provide APIs?',
-    a: 'How long does it take to start using Whelp?',
-  },
+  // {
+  //   q: 'Does Whelp provide APIs?',
+  //   a: 'How long does it take to start using Whelp?',
+  // },
   {
     q: 'How does Whelp work?',
     a: 'It only takes a few minutes to get started with Whelp. Simply click the "Get Started" button, register, and connect your desired apps and channels.',
   },
-  {
-    q: 'What is the first step to begin using Whelp?',
-    a: 'The first step is to click the "Get Started" button, register for an account, and connect the apps and channels you want to use with Whelp.',
-  },
+  // {
+  //   q: 'What is the first step to begin using Whelp?',
+  //   a: 'The first step is to click the "Get Started" button, register for an account, and connect the apps and channels you want to use with Whelp.',
+  // },
   {
     q: 'What are the security and privacy terms for Whelp?',
     a: 'Whelp offers on-premises solutions for ultimate security, and all cloud connections are end-to-end encrypted. Two-factor authentication is also available.',
   },
-  {
-    q: 'What are the pricing options for Whelp?',
-    a: 'Pricing is based on the size of your business, with options available to suit companies of all sizes.',
-  },
+  // {
+  //   q: 'What are the pricing options for Whelp?',
+  //   a: 'Pricing is based on the size of your business, with options available to suit companies of all sizes.',
+  // },
   {
     q: 'Are there any technical requirements to use Whelp?',
     a: 'No, there are no technical requirements to use Whelp.',
@@ -34,10 +34,10 @@ const QUESTIONS = [
     q: 'Is installation or downloading required?',
     a: 'No, installation or downloading is not required. Whelp can be accessed directly through your web browser.',
   },
-  {
-    q: 'Does Whelp offer customized solutions for businesses?',
-    a: 'Yes, Whelp can work with you to develop a customized solution for your specific business needs.',
-  },
+  // {
+  //   q: 'Does Whelp offer customized solutions for businesses?',
+  //   a: 'Yes, Whelp can work with you to develop a customized solution for your specific business needs.',
+  // },
   {
     q: 'How many conversations does my subscription cover?',
     a: 'No, every subscription comes with unlimited conversations, so you can connect with your customers as often as you need.',
@@ -53,7 +53,7 @@ const QUESTIONS = [
 ];
 
 export const FAQ = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
 
   return (
     <div className={styles.wrapper}>

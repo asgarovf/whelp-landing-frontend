@@ -14,13 +14,17 @@
   color: var(--wh-steel-60);
 }
 
-.menu {
+.optionMenu {
   padding-top: 8px;
   padding-bottom: 8px;
   box-shadow: 0px -0.5px 4px rgba(0, 0, 0, 0.08),
     0px 0px 0.5px rgba(0, 0, 0, 0.16), 0px 4px 24px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   background-color: var(--wh-white);
+}
+
+.menu {
+  padding: 0px 8px;
 }
 
 .option {
@@ -31,9 +35,14 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  border-radius: 12px;
 
   &:hover {
     background-color: var(--wh-neutral-0);
+  }
+
+  &:active {
+    background-color: var(--wh-steel-0);
   }
 }
 

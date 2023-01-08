@@ -30,11 +30,11 @@ const Left = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h2">
-        Keep all your data in one place
+        Assign conversations to your teammates
       </Header>
       <Text className={styles.subtext} subtext>
-        Collect and store all customer data in one location for easy access and
-        analysis to optimize your business operations.
+        Easily assign conversations to your teammates to ensure that every
+        customer inquiry is promptly addressed and resolved.
       </Text>
     </Content>
   );

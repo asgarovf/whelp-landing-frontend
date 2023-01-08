@@ -1,7 +1,8 @@
 import { animated, useSpring } from '@react-spring/web';
 import { ChevronDown, ChevronUp } from 'assets/icons';
 import Link from 'next/link';
-import { Fragment, RefObject, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+import { Fragment, useRef, useState } from 'react';
 import { Icon, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 
@@ -12,6 +13,7 @@ import styles from './Navbar.module.scss';
 type Props = { close: () => void };
 
 export const NavbarSm = ({ close }: Props) => {
+  const router = useRouter();
   const _styles = useSpring({
     from: {
       opacity: 0,
@@ -60,6 +62,9 @@ export const NavbarSm = ({ close }: Props) => {
                   behavior: 'smooth',
                 });
               }, 100);
+              if (item.link != null) {
+                router.push(item.link);
+              }
             }}
             key={item.key}
             className={styles.smallItemWrapper}

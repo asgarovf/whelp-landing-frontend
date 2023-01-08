@@ -30,11 +30,11 @@ const Right = () => {
   return (
     <Content>
       <Header inheritStyles="h1" as="h3">
-        Manage all your conversations in one place
+        Schedule Your Messages for Later
       </Header>
       <Text className={styles.subtext} subtext>
-        We created a single inbox across phone, email, chat and messaging apps
-        to manage and respond to all conversations.
+        Schedule messages to be sent at a later time to ensure that your
+        customers receive timely and efficient support.
       </Text>
     </Content>
   );

@@ -29,6 +29,7 @@
 }
 
 .item {
+  cursor: pointer;
   margin-top: 20px;
   padding: 16px 24px 16px 20px;
   background: var(--wh-white);
@@ -40,6 +41,7 @@
 
   & .icon {
     background-color: var(--wh-blue-5);
+    color: var(--wh-blue-90);
     display: flex;
     padding: 14px 18px;
     width: max-content;
@@ -73,8 +75,28 @@
   @media (max-width: $bp-sm) {
     width: 100%;
   }
+
+  & .arrowRight {
+    display: none;
+  }
+
+  &:hover {
+    & .arrowRight {
+      display: flex;
+      margin-left: auto;
+    }
+  }
 }
 
 .flex {
   flex: 1;
+}
+
+.wrapper {
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+  @media (max-width: $bp-sm) {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
 }

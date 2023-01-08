@@ -112,11 +112,12 @@ export const resourcesItems: DropdownItem[] = [
   //   link: '#',
   //   icon: <Play />,
   // },
-  // {
-  //   name: 'Status',
-  //   link: '#',
-  //   icon: <HeartRate />,
-  // },
+  {
+    name: 'Status',
+    link: 'https://status.whelp.co/',
+    icon: <HeartRate />,
+    target: '_blank',
+  },
 ];
 
 export const companyItems: DropdownItem[] = [
