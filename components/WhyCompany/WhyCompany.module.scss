@@ -54,6 +54,7 @@
     line-height: 64px !important;
 
     @media (max-width: $bp-sm) {
+      line-height: 44px !important;
       font-size: 32px !important;
     }
   }
