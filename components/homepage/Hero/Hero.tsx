@@ -3,7 +3,7 @@ import HeroRightBottomRight from 'assets/images/homepage/landing/bottom-right.pn
 import HeroRightLeftCenter from 'assets/images/homepage/landing/left-center.png';
 import HeroRightModelfrom from 'assets/images/homepage/landing/model.png';
 import HeroRightTopRight from 'assets/images/homepage/landing/top-right.png';
-import { useDefaultGap } from 'hooks';
+import { useDefaultGap, useGap } from 'hooks';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button, Content, Header, Input, Text } from 'ui';
@@ -15,7 +15,11 @@ import { DualGrid } from 'components/DualGrid/DualGrid';
 import styles from './Hero.module.scss';
 
 export const Hero = () => {
-  const gap = useDefaultGap();
+  const gap = useGap({
+    small: 40,
+    medium: 40,
+    large: 90,
+  });
 
   return (
     <DualGrid
@@ -78,7 +82,7 @@ const HeroLeft = () => {
 
   return (
     <Content>
-      <Header inheritStyles="hero" as="h1">
+      <Header inheritStyles="h1" as="h1">
         Elevate Your Customer Support with Our Omnichannel Solution
       </Header>
       <Text className={styles.subtext} subtext>

@@ -39,7 +39,22 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: 'Poppins', sans-serif !important;
         }
         .cooper {
-          font-family: ${cooper.style.fontFamily} !important;
+          font-family: 'Cooper', sans-serif !important;
+        }
+        @font-face {
+          font-family: Cooper;
+          src: url(/fonts/Cooper/cooper-light.ttf);
+          font-weight: 400;
+        }
+        @font-face {
+          font-family: Cooper;
+          src: url(/fonts/Cooper/cooper-medium.ttf);
+          font-weight: 600;
+        }
+        @font-face {
+          font-family: Cooper;
+          src: url(/fonts/Cooper/cooper-bold.ttf);
+          font-weight: 800;
         }
       `}</style>
       <style jsx global>
