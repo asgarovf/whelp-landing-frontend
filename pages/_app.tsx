@@ -1,6 +1,7 @@
 import { useInitialTheme } from 'hooks';
 import type { AppProps } from 'next/app';
 import NextNProgress from 'nextjs-progressbar';
+import { useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { GlobalContextProvider } from 'store/global';
 import 'styles/globals.scss';
@@ -12,6 +13,19 @@ export const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   useInitialTheme();
+
+  useEffect(() => {
+    const libraryEl = document.createElement('script');
+    libraryEl.src = 'https://widget.getwhelp.com/app.js';
+    libraryEl.onload = () => {
+      const initEl = document.createElement('script');
+      initEl.append(`Whelp("init", {
+        app_id: "ddaa4869af1be6a5e5acfa2a8271692d"
+      });`);
+      document.body.append(initEl);
+    };
+    document.body.append(libraryEl);
+  }, []);
 
   return (
     <GlobalContextProvider>
