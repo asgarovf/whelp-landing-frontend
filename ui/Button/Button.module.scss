@@ -76,10 +76,16 @@
 }
 
 .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
 }
 
 .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 8px;
 }
 
