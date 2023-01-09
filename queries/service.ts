@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const baseURL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const baseURL = 'https://landing.whelp.co/api';
 
 export const axios = Axios.create({
   baseURL,

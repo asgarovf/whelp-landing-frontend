@@ -10,7 +10,7 @@ import { Container, Layout } from 'ui';
 export default function Compare() {
   return (
     <>
-      <DocumentHead title="Compare" />
+      <DocumentHead title="Compare - Kustomer" />
       <Layout>
         <Navbar />
         <CompareHero
