@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react';
 import { useGlobalStore } from 'store/global';
-import { Button, Header, Icon, Input, Select, Text } from 'ui';
+import { Button, Header, Input, Select, Text } from 'ui';
 import { clsnm } from 'utils/clsnm';
 import {
   SelectOption,

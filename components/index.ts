@@ -71,3 +71,5 @@ export { Contact } from './Contact/Contact';
 export { PricingComponent } from './PricingComponent/PricingComponent';
 export { DemoForm } from './DemoForm/DemoForm';
 export { Success } from './Success/Success';
+export { CompareHero } from './CompareHero/CompareHero';
+export { Comparison } from './Comparison/Comparison';

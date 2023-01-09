@@ -17,6 +17,7 @@ import ChevronDown from './chevron-down.svg';
 import ChevronUp from './chevron-up.svg';
 import Chip from './chip.svg';
 import Clipboard from './clipboard.svg';
+import CloseNew from './close-new.svg';
 import Close from './close.svg';
 import Download from './download.svg';
 import Edit from './edit.svg';
@@ -59,6 +60,7 @@ export {
   Building,
   Calendar,
   Close,
+  CloseNew,
   Chip,
   Check,
   ChartPie,

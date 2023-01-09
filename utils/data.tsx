@@ -315,25 +315,25 @@ export const footerData = [
     header: 'Company',
     items: companyItems,
   },
-  // {
-  //   header: 'Compare',
-  //   items: [
-  //     {
-  //       name: 'Intercom',
-  //       link: '/',
-  //     },
-  //     {
-  //       name: 'Zendesk',
-  //       link: '/',
-  //     },
-  //     {
-  //       name: 'HubSpot',
-  //       link: '/',
-  //     },
-  //     {
-  //       name: 'Livechat',
-  //       link: '/',
-  //     },
-  //   ],
-  // },
+  {
+    header: 'Compare',
+    items: [
+      {
+        name: 'Kustomer',
+        link: '/compare/kustomer',
+      },
+      {
+        name: 'Zendesk',
+        link: '/compare/zendesk',
+      },
+      // {
+      //   name: 'HubSpot',
+      //   link: '/',
+      // },
+      // {
+      //   name: 'Livechat',
+      //   link: '/',
+      // },
+    ],
+  },
 ];

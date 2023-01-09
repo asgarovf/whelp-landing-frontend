@@ -64,8 +64,8 @@ export const PricingComponent = () => {
                 {item.buttonText}
               </Button>
               <div className={styles.itemOptions}>
-                {item.items.map((item) => (
-                  <div className={styles.option}>
+                {item.items.map((item, key) => (
+                  <div key={key} className={styles.option}>
                     <Icon className={styles.icon}>
                       <Check />
                     </Icon>

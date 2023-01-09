@@ -1,0 +1,31 @@
+@import 'styles/vars.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @media (max-width: $bp-sm) {
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+}
+
+.header {
+  text-align: center;
+}
+
+.subtext {
+  text-align: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+  @media (max-width: $bp-sm) {
+    max-width: 100%;
+  }
+}
